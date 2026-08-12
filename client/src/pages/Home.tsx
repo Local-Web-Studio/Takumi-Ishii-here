@@ -24,9 +24,7 @@ export default function Home() {
           <div className="hero-noise" />
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-content page-wrap">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> NOT A PORTFOLIO / AN INVITATION</p>
             <div className="hero-title-wrap">
-              <p className="hero-side-label">SELF SALES<br />LANDING PAGE</p>
               <h1>
                 経験がないことは、<br />
                 <em>挑戦しない<span className="hero-mobile-break"><br /></span>理由</em>に<br />
@@ -38,10 +36,9 @@ export default function Home() {
                 Webサイト制作の実績はありません。<br />
                 それでも、この機会を任せてほしい。
               </p>
-              <a className="scroll-invite" href="#tension"><span>続きを読む</span><ChevronDown size={19} /></a>
+              <a className="scroll-invite" href="#profile"><span>プロフィールを見る</span><ChevronDown size={19} /></a>
             </div>
           </div>
-          <div className="hero-credit">TAKUMI ISHII / PM CANDIDATE</div>
         </section>
 
         <section id="profile" className="tension-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
