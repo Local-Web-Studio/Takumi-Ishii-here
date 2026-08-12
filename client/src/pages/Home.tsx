@@ -38,7 +38,7 @@ export default function Home() {
                 Webサイト制作の実績はありません。<br className="hero-lede-break" />それでも、この機会を任せてほしい。
               </p>
               <div className="hero-passion-block" style={{ borderLeft: "2px solid var(--vermillion)", paddingLeft: "18px", color: "rgba(244,241,234,0.9)", fontSize: "13px", lineHeight: "1.9" }}>
-                <p style={{ margin: "0 0 6px", fontWeight: "700", color: "var(--paper)" }}>「未経験だから、やらない。」——そう言ってしまえば、簡単です。</p>
+                <p style={{ margin: "0 0 6px", fontWeight: "700", color: "var(--paper)" }}><span>「未経験だから、やらない。」</span><br className="hero-passion-break" /><span>——そう言ってしまえば、簡単です。</span></p>
                 <p style={{ margin: 0, color: "rgba(244,241,234,0.75)" }}>でも、自分はまだやったことがないことに踏み込んでいきたい。自分の可能性を自分で狭める選び方はしたくありません。今回のWebサイト立ち上げも、その一つです。</p>
               </div>
             </div>
