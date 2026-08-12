@@ -45,11 +45,10 @@ export default function Home() {
         </section>
 
         <section id="profile" className="tension-section profile-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
-          <div className="page-wrap tension-grid profile-layout">
-            <div className="tension-index"><span>00</span><i /></div>
+          <div className="page-wrap profile-layout">
             <div className="profile-content">
-              <p className="eyebrow dark-eyebrow">プロフィール</p>
-              <h2>はじめまして、<br /><em>石井 匠</em>です。</h2>
+              <p className="eyebrow dark-eyebrow"><span className="signal-dot" /> 人物と実務の基盤</p>
+              <h2>はじめまして、<em>石井 匠</em>です。</h2>
               <div className="profile-stage">
                 <figure className="profile-photo-frame" aria-label="プロフィール写真">
                   <div className="profile-photo-container">
@@ -76,7 +75,7 @@ export default function Home() {
         <section className="spark-section">
           <div className="page-wrap spark-layout">
             <div className="spark-statement">
-              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 挑戦する理由</p>
+              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 挑戦を続ける理由</p>
               <h2 className="spark-title">
                 <span>何歳になっても、</span>
                 <span>今の自分を<br className="mobile-only-break" />超えていきたい。</span>
@@ -84,9 +83,9 @@ export default function Home() {
             </div>
             <div className="spark-copy">
               <ul className="spark-principles">
-                <li><span>01</span>一つ達成したら、また次の目標をつくる</li>
-                <li><span>02</span>失敗や経験を、自分の価値に変える</li>
-                <li><span>03</span>今回のWeb制作も、その挑戦の一つ</li>
+                <li><i className="principle-dot" aria-hidden="true" />一つ達成したら、また次の目標をつくる</li>
+                <li><i className="principle-dot" aria-hidden="true" />失敗や経験を、自分の価値に変える</li>
+                <li><i className="principle-dot" aria-hidden="true" />今回のWeb制作も、その挑戦の一つ</li>
               </ul>
               <div className="spark-action-banner">
                 <strong>「だから今回も挑戦する」</strong>
@@ -97,7 +96,7 @@ export default function Home() {
 
         <section className="threshold-section section-cream">
           <div className="page-wrap threshold-wrap">
-            <p className="eyebrow dark-eyebrow">信頼の根拠へ</p>
+            <p className="eyebrow dark-eyebrow"><span className="signal-dot" /> 実行力の根拠</p>
             <div className="threshold-question">
               <p>でも、熱意だけでは任せられない。</p>
               <h2>では、なぜ未経験でも<br /><em>「やり切れる」と言えるのか。</em></h2>

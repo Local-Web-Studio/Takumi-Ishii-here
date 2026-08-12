@@ -117,7 +117,7 @@ em { font-style: normal; color: var(--vermillion); }
 .answer-quote strong { font-size:clamp(17px,2.2vw,26px); line-height:1.65; font-weight:700; letter-spacing:.01em; }
 
 .evidence-section { color:var(--ink); background:var(--paper-bright); padding:clamp(92px,12vw,160px) 0; }
-.offset-heading { width:min(100%, 820px); margin-left:auto; }
+.standard-heading { width:min(100%, 820px); }
 .section-heading > p:last-child { max-width:590px; margin:0; color:#596372; line-height:1.9; font-size:14px; }
 .flagship-case { margin-top:clamp(70px,10vw,128px); padding:42px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); display:grid; grid-template-columns:1.1fr 5fr 2.2fr; gap:clamp(22px,4vw,65px); align-items:start; }
 .case-number { display:flex; align-items:center; gap:11px; font:500 11px/1 "IBM Plex Mono",monospace; color:var(--vermillion); }
@@ -222,7 +222,7 @@ em { font-style: normal; color: var(--vermillion); }
   .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .method-heading > p:last-child { font-size:13px; }
   .answer-quote { margin-top:40px; padding-left:18px; }
   .answer-quote strong { font-size:16px; }
-  .offset-heading { width:100%; margin-left:0; }
+  .standard-heading { width:100%; }
   .flagship-case { margin-top:55px; padding:29px 0 35px; grid-template-columns:1fr; gap:24px; }
   .case-main h3, .evidence-card h3 { font-size:28px; }
   .metric-block { max-width:250px; }
@@ -271,7 +271,7 @@ em { font-style: normal; color: var(--vermillion); }
 .tension-copy { max-width:580px; margin:39px 0 0; color:#45505e; font-size:15px; line-height:2.1; }
 .profile-section { padding-top:clamp(86px,11vw,150px); padding-bottom:clamp(86px,11vw,150px); }
 .profile-content { max-width:900px; }
-.profile-content h2 { margin-bottom:16px; }
+.profile-content h2 { margin:21px 0 16px; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(40px,5vw,71px); line-height:1.28; letter-spacing:-.065em; font-weight:900; }
 .profile-stage { margin-top:38px; display:grid; grid-template-columns:minmax(160px, .72fr) minmax(0, 1.45fr); gap:clamp(30px,5vw,76px); align-items:start; }
 .profile-photo-frame { margin:0; }
 .profile-photo-container { position:relative; aspect-ratio:4 / 5; min-height:210px; overflow:hidden; border:1px solid rgba(11,16,26,.22); background:#101724; }
@@ -298,6 +298,7 @@ em { font-style: normal; color: var(--vermillion); }
 .spark-principles { list-style:none; padding:0; margin:0 0 28px; display:flex; flex-direction:column; gap:14px; border-top:1px solid rgba(255,255,255,.12); padding-top:22px; }
 .spark-principles li { display:flex; align-items:center; gap:16px; color:#c5d0de; font-size:clamp(14px,1.35vw,17px); letter-spacing:-.015em; }
 .spark-principles li span { color:var(--vermillion); font:500 11px/1 "IBM Plex Mono",monospace; letter-spacing:.12em; background:rgba(227,79,38,.12); padding:6px 8px; border-radius:4px; }
+.spark-principles li .principle-dot { flex:0 0 auto; width:6px; height:6px; border-radius:50%; background:var(--vermillion); }
 .spark-action-banner { background:rgba(255,255,255,.05); border-left:3px solid var(--vermillion); padding:18px 22px; border-radius:0 6px 6px 0; }
 .spark-action-banner strong { color:#fff; font-size:clamp(16px,1.55vw,20px); letter-spacing:-.02em; font-weight:800; }
 .threshold-section { padding:clamp(110px,17vw,230px) 0; text-align:left; }
@@ -351,13 +352,14 @@ em { font-style: normal; color: var(--vermillion); }
 .proof-art::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(16,23,36,.84),transparent 58%); }
 .proof-art figcaption { position:absolute; z-index:1; bottom:21px; left:21px; color:var(--paper); font:400 9px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; }
 .truth-section { padding:clamp(75px,11vw,160px) 0; }
-.truth-layout { display:grid; grid-template-columns:1.05fr 1fr; gap:9vw; }
+.truth-layout { display:grid; grid-template-columns:1.05fr 1fr; gap:9vw; align-items:end; }
 .truth-layout h2 { margin:22px 0 0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(35px,4.4vw,62px); line-height:1.34; letter-spacing:-.06em; font-weight:900; }
-.truth-copy { padding-top:36px; }
+.truth-copy { padding-top:0; }
 .truth-copy > p { margin:0 0 24px; color:rgba(244,241,234,.77); font-size:14px; line-height:2.15; }
 .reveal-section { padding:clamp(75px,11vw,160px) 0; color:var(--ink); background:#e7e1d7; }
-.reveal-wrap { display:grid; grid-template-columns:1.05fr 4.3fr 2fr; gap:34px; }
+.reveal-wrap { max-width:1085px; margin-left:12.5%; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(190px,.65fr); gap:clamp(34px,6vw,92px); align-items:start; }
 .reveal-statement { max-width:670px; position:relative; }
+.reveal-statement .eyebrow { margin-bottom:24px; }
 .reveal-quote { display:block; margin-bottom:-24px; color:var(--vermillion); font:900 125px/.7 Georgia,serif; }
 .reveal-statement h2 { position:relative; margin:0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(30px,4.1vw,57px); line-height:1.38; letter-spacing:-.06em; font-weight:900; }
 .reveal-statement p { margin:29px 0 0; color:#414b59; font-size:14px; line-height:2.1; }
@@ -431,7 +433,7 @@ em { font-style: normal; color: var(--vermillion); }
   .proof-art { min-height:185px; max-height:185px; }
   .truth-copy { padding-top:0; }
   .truth-copy > p { font-size:13px; }
-  .reveal-wrap { grid-template-columns:1fr; gap:24px; }
+  .reveal-wrap { margin-left:0; grid-template-columns:1fr; gap:24px; }
   .reveal-statement h2 { font-size:clamp(30px,8.5vw,38px); }
   .reveal-statement p { font-size:13px; }
   .reveal-checks { padding-top:3px; }
@@ -447,27 +449,29 @@ em { font-style: normal; color: var(--vermillion); }
 /* Typography audit preview: device-specific baseline supplied for this LP. */
 @media (min-width:1025px) {
   .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(48px,5vw,64px); line-height:1.6; }
-  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(32px,3vw,40px); line-height:1.6; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(32px,3vw,40px); line-height:1.6; }
   .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:13px; line-height:1.5; }
 }
 
 @media (min-width:761px) and (max-width:1024px) {
   .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(36px,5vw,48px); line-height:1.6; }
-  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(24px,3.3vw,32px); line-height:1.65; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(24px,3.3vw,32px); line-height:1.65; }
   .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:13px; line-height:1.5; }
   .flagship-case { grid-template-columns:1fr 1fr; }
   .flagship-case .case-number { grid-column:1 / -1; }
-  .evidence-grid, .principle-grid, .reveal-wrap, .spine-path { grid-template-columns:1fr 1fr; }
+  .evidence-grid, .principle-grid, .spine-path { grid-template-columns:1fr 1fr; }
   .evidence-grid .systems-art, .spine-path article:last-child { grid-column:1 / -1; }
   .proof-support { grid-template-columns:1fr; }
-  .principle-grid > :first-child, .reveal-wrap > :first-child { grid-column:1 / -1; }
+  .principle-grid > :first-child { grid-column:1 / -1; }
+  .reveal-wrap { grid-template-columns:minmax(0,1.35fr) minmax(190px,.65fr); gap:clamp(28px,4vw,50px); }
 }
 
 @media (max-width:760px) {
-  .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(28px,8.5vw,36px); line-height:1.5; }
-  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(20px,6vw,24px); line-height:1.6; }
+  .hero h1 { font-size:clamp(23px,calc(8.5vw - 5px),31px); line-height:1.5; }
+  .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(28px,8.5vw,36px); line-height:1.5; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(20px,6vw,24px); line-height:1.6; }
   .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.65; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:12px; line-height:1.5; }
   .profile-timeline li strong, .deep-link strong, .gate h3, .spine-path h3, .reveal-cta { font-size:16px; line-height:1.5; }
