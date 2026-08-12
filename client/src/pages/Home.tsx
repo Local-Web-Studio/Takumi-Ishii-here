@@ -6,7 +6,6 @@ import { ArrowDownRight, MoveRight } from "lucide-react";
 import { Link } from "wouter";
 
 const heroImage = "/manus-storage/ishii-hero-line-of-intent_08136d36.png";
-const symbolImage = "/manus-storage/ishii-ti-symbol_b6b82ae3.png";
 
 export default function Home() {
   return (
@@ -54,7 +53,7 @@ export default function Home() {
               <div className="profile-stage">
                 <figure className="profile-photo-frame" aria-label="プロフィール写真">
                   <div className="profile-photo-container">
-                    <img src="/assets/profile-placeholder.jpg" alt="石井 匠 プロフィール写真" className="profile-photo-img" />
+                    <img src={`${import.meta.env.BASE_URL}assets/profile-placeholder.jpg`} alt="石井 匠 プロフィール写真" className="profile-photo-img" />
                   </div>
                   <figcaption>TAKUMI ISHII</figcaption>
                 </figure>
@@ -77,39 +76,37 @@ export default function Home() {
         <section className="spark-section">
           <div className="page-wrap spark-layout">
             <div className="spark-statement">
-              <img className="section-symbol" src={symbolImage} alt="" />
-              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 前へ踏み出す理由</p>
-              <h2>知らない領域でも、<br />目的から逆算し、<br /><em>前へ進める。</em></h2>
+              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 挑戦する理由</p>
+              <h2>何歳になっても、<br />今の自分を超えようとしていたい。</h2>
             </div>
             <div className="spark-copy">
-              <p>
-                これは、仕事を増やしたいだけの話ではありません。経験のない領域でも、目的を定め、必要な知見を集め、最後まで前へ進められるか。その力を、Webサイト立ち上げで証明したい。
-              </p>
-              <p>
-                ただし、熱意だけで任せてほしいとは言いません。自分が何をできるのか。なぜ、そう言えるのか。実務の根拠を、次の章で開示します。
-              </p>
-              <div className="tease-row"><span>目的を定める</span><span>根拠を示す</span><span>前へ進める</span></div>
+              <ul className="spark-principles">
+                <li><span>01</span>一つ達成したら、また次の目標をつくる</li>
+                <li><span>02</span>失敗や経験を、自分の価値に変える</li>
+                <li><span>03</span>今回のWeb制作も、その挑戦の一つ</li>
+              </ul>
+              <div className="spark-action-banner">
+                <strong>「だから今回も挑戦する」</strong>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="threshold-section section-cream">
           <div className="page-wrap threshold-wrap">
-            <p className="eyebrow dark-eyebrow">次のステップへ</p>
+            <p className="eyebrow dark-eyebrow">信頼の根拠へ</p>
             <div className="threshold-question">
-              <p>ここから先は、<br />職務経歴書ではありません。</p>
-              <h2>石井匠という人間を、<br /><em>もう少し知るための話です。</em></h2>
+              <p>でも、熱意だけでは任せられない。</p>
+              <h2>では、なぜ未経験でも<br /><em>「やり切れる」</em>と言えるのか。</h2>
             </div>
             <p className="threshold-copy">
-              実績、失敗、仕事の進め方。そして、なぜ自分は挑戦をやめないのか。<br className="desktop-break" />
-              それぞれは別の話に見えるかもしれません。でも、自分の中ではすべて一つにつながっています。
+              ただ、「やりたい」だけで仕事を任せてほしいとは思っていません。<br />
+              その答えは、これまでの仕事の中にあります。
             </p>
             <Link href="/chapter-02" className="deep-link">
-              <span className="deep-link-caption">実務の証明と仕事の進め方</span>
-              <strong>実績と、仕事の進め方を見る</strong>
-              <MoveRight size={28} />
+              <strong>やり切れると言える根拠を見る</strong>
+              <MoveRight size={20} />
             </Link>
-            <p className="deep-link-note">※ 次の章では、実績と自分の考えをお話しします。</p>
           </div>
         </section>
       </main>
