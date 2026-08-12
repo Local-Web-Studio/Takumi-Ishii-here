@@ -21,19 +21,21 @@ export default function ChapterTwo() {
   return (
     <div className="site-shell chapter-two">
       <a className="skip-link" href="#deep-main">本文へ移動</a>
-      <div className="journey-rail deep-rail" aria-hidden="true"><i /><b>04</b><b>05</b><b>06</b><b>07</b><b>08</b><b>09</b><b>10</b></div>
-      <header className="topbar deep-topbar" aria-label="サイトヘッダー">
+      <header className="topbar deep-topbar" aria-label="サイトヘッダー" style={{ position: "fixed", top: 0, background: "rgba(11,16,26,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(244,241,234,0.12)" }}>
         <Link href="/" className="brand-mark" aria-label="第1章へ戻る">
-          <img src={symbolImage} alt="" /><span>TAKUMI ISHII</span>
+          <span>TAKUMI ISHII</span>
         </Link>
-        <Link className="return-link" href="/"><ArrowLeft size={15} /> 最初に戻る</Link>
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <a href="#deep-ask" style={{ font: "500 11px/1 'IBM Plex Mono', monospace", letterSpacing: "0.1em", color: "var(--paper)", borderBottom: "1px solid var(--vermillion)", paddingBottom: "2px" }}>CONTACT</a>
+          <Link className="return-link" href="/" style={{ color: "rgba(244,241,234,0.7)" }}><ArrowLeft size={15} /> 最初に戻る</Link>
+        </div>
       </header>
 
       <main id="deep-main">
         <section className="deep-hero section-ink">
           <div className="page-wrap deep-hero-content">
             <img className="deep-symbol" src={symbolImage} alt="" />
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> GATE 04 / THE PERSON BEHIND THE PROPOSAL</p>
+            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> THE PERSON BEHIND THE PROPOSAL</p>
             <div className="deep-title-block">
               <span>TAKUMI<br />ISHII</span>
               <h1>経験のない領域でも、<br /><em>目的から逆算し、</em><br />最後まで形にする。</h1>
@@ -44,7 +46,7 @@ export default function ChapterTwo() {
 
         <section className="spine-section section-cream">
           <div className="page-wrap">
-            <p className="eyebrow dark-eyebrow">GATE 05 / ONE LIFE. ONE LINE.</p>
+            <p className="eyebrow dark-eyebrow">ONE LIFE. ONE LINE.</p>
             <div className="spine-intro">
               <h2>実績も、失敗も、<br />挑戦も。<br /><em>全部、仕事を前へ進める力になる。</em></h2>
               <p>未知の領域でも、目的を定め、必要な知見を集め、関係者と合意し、最後まで形にする。その一連の前進を、Webサイト立ち上げでも再現したい。熱意ではなく、進め方と結果で信頼に応えます。</p>
@@ -60,7 +62,7 @@ export default function ChapterTwo() {
         <section className="proof-section">
           <div className="page-wrap">
             <div className="section-heading offset-heading">
-              <p className="eyebrow dark-eyebrow">GATE 06 / PROOF, NOT JUST WORDS</p>
+              <p className="eyebrow dark-eyebrow">PROOF, NOT JUST WORDS</p>
               <h2>口だけでは、<br /><em>前に進まない。</em></h2>
               <p>三菱自動車にて、倉庫システムマネジメントおよびオペレーション管理に従事しています。</p>
             </div>
@@ -86,7 +88,7 @@ export default function ChapterTwo() {
         <section className="truth-section section-ink">
           <div className="page-wrap truth-layout">
             <div>
-              <p className="eyebrow light-eyebrow">GATE 07 / THE PART I WILL NOT HIDE</p>
+              <p className="eyebrow light-eyebrow">THE PART I WILL NOT HIDE</p>
               <h2>完璧ではなかった。<br />だから、<br /><em>終わらせなかった。</em></h2>
             </div>
             <div className="truth-copy">
@@ -99,7 +101,7 @@ export default function ChapterTwo() {
 
         <section className="method-section section-cream">
           <div className="page-wrap method-top">
-            <div className="method-heading"><p className="eyebrow dark-eyebrow">GATE 08 / IF THE WEB PROJECT STARTS TOMORROW</p><h2>知らない領域でも、<br /><em>進め方</em>はぶらさない。</h2><p>最初から一人ですべてを判断しようとはしません。目的と会社の基準を理解し、必要な知見を集め、検証のゲートを置きながら前に進めます。</p></div>
+            <div className="method-heading"><p className="eyebrow dark-eyebrow">IF THE WEB PROJECT STARTS TOMORROW</p><h2>知らない領域でも、<br /><em>進め方</em>はぶらさない。</h2><p>最初から一人ですべてを判断しようとはしません。目的と会社の基準を理解し、必要な知見を集め、検証のゲートを置きながら前に進めます。</p></div>
             <figure className="workflow-art"><img src={workflowImage} alt="プロジェクトの検証ゲートを示す抽象図" /></figure>
           </div>
           <div className="gate-list page-wrap">{gates.map(([number, title, body]) => <article className="gate" key={number}><div className="gate-marker"><span>{number}</span><i /></div><div><h3>{title}</h3><p>{body}</p></div><MoveRight className="gate-arrow" size={22} /></article>)}</div>
@@ -107,7 +109,7 @@ export default function ChapterTwo() {
 
         <section className="reveal-section">
           <div className="page-wrap reveal-wrap">
-            <p className="eyebrow dark-eyebrow">GATE 09 / THE RETURN ON INVESTMENT</p>
+            <p className="eyebrow dark-eyebrow">THE RETURN ON INVESTMENT</p>
             <div className="reveal-statement">
               <span className="reveal-quote">“</span>
               <h2>未経験の挑戦は、<br /><em>あなたにとっての</em><br />確かな投資になる。</h2>
@@ -126,7 +128,7 @@ export default function ChapterTwo() {
         <section id="deep-ask" className="deep-ask">
           <div className="ask-overlay" />
           <div className="page-wrap deep-ask-content">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> GATE 10 / THE INVITATION TO MEET</p>
+            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> THE INVITATION TO MEET</p>
             <p className="decision-note">DECISION NOTE / THE NEXT GATE IS A CONVERSATION</p>
             <h2>任せる価値があるか、<br /><em>直接、確かめてください。</em></h2>
             <p>この案件をどう理解し、何を先に決め、誰と連携し、どの順番で形にするのか。<br className="desktop-break" />これまでの実績と具体策を、直接お話しさせてください。</p>

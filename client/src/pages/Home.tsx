@@ -12,13 +12,11 @@ export default function Home() {
   return (
     <div className="site-shell surface-page">
       <a className="skip-link" href="#main">本文へ移動</a>
-      <div className="journey-rail" aria-hidden="true"><i /><b>GATE 01</b><b>GATE 02</b><b>GATE 03</b><b>OPEN</b></div>
-      <header className="topbar" aria-label="サイトヘッダー">
-        <a href="#top" className="brand-mark" aria-label="石井匠の自己営業LP、先頭へ">
-          <img src={symbolImage} alt="" />
+      <header className="topbar" aria-label="サイトヘッダー" style={{ position: "fixed", top: 0, background: "rgba(11,16,26,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(244,241,234,0.12)" }}>
+        <a href="#top" className="brand-mark" aria-label="石井匠の自己営業、先頭へ">
           <span>TAKUMI ISHII</span>
         </a>
-        <span className="brand-sub">SELF SALES LP</span>
+        <a href="#threshold" className="nav-contact" style={{ font: "500 11px/1 'IBM Plex Mono', monospace", letterSpacing: "0.1em", color: "var(--paper)", borderBottom: "1px solid var(--vermillion)", paddingBottom: "2px" }}>CONTACT</a>
       </header>
 
       <main id="main">
@@ -50,7 +48,7 @@ export default function Home() {
           <div className="page-wrap tension-grid">
             <div className="tension-index"><span>01</span><i /></div>
             <div>
-              <p className="eyebrow dark-eyebrow">GATE 01 / THE HONEST START</p>
+              <p className="eyebrow dark-eyebrow">THE HONEST START</p>
               <h2>「未経験だから、<br />やらない。」</h2>
               <p className="tension-answer">そう言ってしまえば、簡単です。</p>
               <p className="tension-copy">
@@ -65,7 +63,7 @@ export default function Home() {
           <div className="page-wrap spark-layout">
             <div className="spark-statement">
               <img className="section-symbol" src={symbolImage} alt="" />
-              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> GATE 02 / THE REASON TO STEP FORWARD</p>
+              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> THE REASON TO STEP FORWARD</p>
               <h2>知らない領域でも、<br />目的から逆算し、<br /><em>前へ進める。</em></h2>
             </div>
             <div className="spark-copy">
@@ -82,7 +80,7 @@ export default function Home() {
 
         <section className="threshold-section section-cream">
           <div className="page-wrap threshold-wrap">
-            <p className="eyebrow dark-eyebrow">GATE 03 / THE THRESHOLD</p>
+            <p className="eyebrow dark-eyebrow">THE THRESHOLD</p>
             <div className="threshold-question">
               <p>ここから先は、<br />職務経歴書ではありません。</p>
               <h2>石井匠という人間を、<br /><em>もう少し知るための話です。</em></h2>
