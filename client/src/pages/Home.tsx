@@ -45,16 +45,29 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="profile" className="tension-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
-          <div className="page-wrap tension-grid">
+        <section id="profile" className="tension-section profile-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
+          <div className="page-wrap tension-grid profile-layout">
             <div className="tension-index"><span>00</span><i /></div>
-            <div>
-              <p className="eyebrow dark-eyebrow">プロフィール / 誰がこの提案をしているのか</p>
+            <div className="profile-content">
+              <p className="eyebrow dark-eyebrow">プロフィール</p>
               <h2>はじめまして、<br /><em>石井 匠</em>です。</h2>
-              <p className="tension-answer" style={{ marginTop: "12px" }}>三菱自動車にて、倉庫システムマネジメントおよびオペレーション管理を担当しています。</p>
-              <p className="tension-copy" style={{ marginTop: "16px" }}>
-                日々の業務では、現場のオペレーションとITシステムをつなぎ、工程のボトルネック解消やシステムの改善・導入を進めてきました。「未経験の領域であっても、目的から逆算し、必要な知見を集めて最後まで形にする」という軸を持って仕事に取り組んでいます。今回のWebサイト立ち上げの機会にあたり、自分の経歴と仕事の進め方をこのページにまとめました。
-              </p>
+              <div className="profile-stage">
+                <figure className="profile-photo-frame" aria-label="プロフィール写真">
+                  <div className="profile-photo-container">
+                    <img src="/assets/profile-placeholder.jpg" alt="石井 匠 プロフィール写真" className="profile-photo-img" />
+                  </div>
+                  <figcaption>TAKUMI ISHII</figcaption>
+                </figure>
+                <div className="profile-timeline-wrap">
+                  <p className="profile-timeline-label">これまでの歩み</p>
+                  <ol className="profile-timeline" aria-label="石井匠のこれまでの歩み">
+                    <li><span>01</span><strong>自動車メーカー入社</strong></li>
+                    <li><span>02</span><strong>物流部門に配属</strong></li>
+                    <li><span>03</span><strong>倉庫オペレーション・システム領域へ</strong></li>
+                    <li><span>04</span><strong>PM / 改善業務を担当</strong></li>
+                  </ol>
+                </div>
+              </div>
             </div>
           </div>
         </section>

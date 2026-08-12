@@ -269,6 +269,22 @@ em { font-style: normal; color: var(--vermillion); }
 .tension-grid h2 { margin:21px 0 10px; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(40px,5vw,71px); line-height:1.28; letter-spacing:-.065em; font-weight:900; }
 .tension-answer { margin:0; color:var(--vermillion); font-size:17px; font-weight:700; }
 .tension-copy { max-width:580px; margin:39px 0 0; color:#45505e; font-size:15px; line-height:2.1; }
+.profile-section { padding-top:clamp(86px,11vw,150px); padding-bottom:clamp(86px,11vw,150px); }
+.profile-content { max-width:900px; }
+.profile-content h2 { margin-bottom:16px; }
+.profile-stage { margin-top:38px; display:grid; grid-template-columns:minmax(160px, .72fr) minmax(0, 1.45fr); gap:clamp(30px,5vw,76px); align-items:start; }
+.profile-photo-frame { margin:0; }
+.profile-photo-container { position:relative; aspect-ratio:4 / 5; min-height:210px; overflow:hidden; border:1px solid rgba(11,16,26,.22); background:#101724; }
+.profile-photo-img { width:100%; height:100%; object-fit:cover; filter:saturate(.85) contrast(1.02); }
+.profile-photo-frame figcaption { margin-top:10px; color:#697381; font:500 9px/1 "IBM Plex Mono",monospace; letter-spacing:.12em; }
+.profile-timeline-wrap { padding-top:2px; }
+.profile-timeline-label { margin:0 0 17px; color:var(--vermillion); font:500 10px/1 "IBM Plex Mono",monospace; letter-spacing:.1em; }
+.profile-timeline { position:relative; margin:0; padding:0; list-style:none; border-top:1px solid rgba(11,16,26,.18); }
+.profile-timeline::before { content:""; position:absolute; top:20px; bottom:20px; left:13px; width:1px; background:rgba(11,16,26,.2); }
+.profile-timeline li { position:relative; min-height:66px; padding:18px 18px 16px 47px; border-bottom:1px solid rgba(11,16,26,.14); display:flex; align-items:center; }
+.profile-timeline li::before { content:""; position:absolute; left:10px; width:7px; height:7px; border:2px solid var(--vermillion); border-radius:50%; background:var(--paper-bright); }
+.profile-timeline li span { position:absolute; left:0; color:var(--vermillion); font:500 9px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; }
+.profile-timeline li strong { color:var(--ink); font-size:clamp(14px,1.45vw,18px); line-height:1.5; letter-spacing:-.025em; }
 .spark-section { color:var(--paper); background:var(--ink-soft); padding:clamp(105px,15vw,205px) 0; }
 .spark-layout { display:grid; grid-template-columns:1.06fr .94fr; gap:9vw; align-items:end; }
 .spark-statement h2 { margin:22px 0 0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(37px,4.8vw,68px); line-height:1.32; letter-spacing:-.065em; font-weight:900; }
@@ -368,6 +384,17 @@ em { font-style: normal; color: var(--vermillion); }
   .tension-grid { grid-template-columns:1fr; gap:42px; }
   .tension-grid h2 { font-size:clamp(38px,11vw,48px); }
   .tension-copy { font-size:13px; }
+  .profile-section { padding-top:76px; padding-bottom:78px; }
+  .profile-content h2 { margin-bottom:14px; }
+  .profile-stage { margin-top:30px; grid-template-columns:104px minmax(0,1fr); gap:22px; }
+  .profile-photo-container { min-height:130px; }
+  .profile-photo-frame figcaption { margin-top:7px; font-size:7px; }
+  .profile-timeline-label { margin-bottom:12px; font-size:8px; }
+  .profile-timeline::before { top:17px; bottom:17px; left:10px; }
+  .profile-timeline li { min-height:56px; padding:12px 8px 12px 32px; }
+  .profile-timeline li::before { left:7px; width:6px; height:6px; }
+  .profile-timeline li span { font-size:7px; }
+  .profile-timeline li strong { font-size:12px; line-height:1.45; }
   .spark-layout, .spine-intro, .truth-layout { grid-template-columns:1fr; gap:38px; }
   .spark-statement h2 { font-size:clamp(36px,10.5vw,48px); }
   .section-symbol { width:48px; height:48px; top:-20px; right:0; }
