@@ -2,7 +2,7 @@
  * THE LINE OF INTENT / CHAPTER 01
  * Intent: withhold the proof just long enough to earn a voluntary click into the deeper story.
  */
-import { ArrowDownRight, ChevronDown, MoveRight } from "lucide-react";
+import { ArrowDownRight, MoveRight } from "lucide-react";
 import { Link } from "wouter";
 
 const heroImage = "/manus-storage/ishii-hero-line-of-intent_08136d36.png";
@@ -16,7 +16,10 @@ export default function Home() {
         <a href="#top" className="brand-mark" aria-label="石井匠の自己営業、先頭へ">
           <span>TAKUMI ISHII</span>
         </a>
-        <Link href="/chapter-02#deep-ask" className="nav-contact" style={{ font: "500 11px/1 'IBM Plex Mono', monospace", letterSpacing: "0.1em", color: "var(--paper)", borderBottom: "1px solid var(--vermillion)", paddingBottom: "2px" }}>CONTACT</Link>
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <a href="#profile" className="header-cta">プロフィール</a>
+          <Link href="/chapter-02#deep-ask" className="header-cta">CONTACT</Link>
+        </div>
       </header>
 
       <main id="main">
@@ -25,18 +28,19 @@ export default function Home() {
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-content page-wrap">
             <div className="hero-title-wrap">
-              <h1>
-                経験がないことは、<br />
-                <em>挑戦しない<span className="hero-mobile-break"><br /></span>理由</em>に<br />
-                ならない。
+              <h1 className="hero-title-text">
+                <span className="hero-line-1">経験がないことは、</span><br />
+                <span className="hero-line-2"><em>挑戦しない理由にならない。</em></span>
               </h1>
             </div>
-            <div className="hero-bottom">
-              <p className="hero-lede">
-                Webサイト制作の実績はありません。<br />
-                それでも、この機会を任せてほしい。
+            <div className="hero-bottom" style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: "32px", alignItems: "start" }}>
+              <p className="hero-lede" style={{ margin: 0 }}>
+                Webサイト制作の実績はありません。それでも、この機会を任せてほしい。
               </p>
-              <a className="scroll-invite" href="#profile"><span>プロフィールを見る</span><ChevronDown size={19} /></a>
+              <div className="hero-passion-block" style={{ borderLeft: "2px solid var(--vermillion)", paddingLeft: "18px", color: "rgba(244,241,234,0.9)", fontSize: "13px", lineHeight: "1.9" }}>
+                <p style={{ margin: "0 0 6px", fontWeight: "700", color: "var(--paper)" }}>「未経験だから、やらない。」——そう言ってしまえば、簡単です。</p>
+                <p style={{ margin: 0, color: "rgba(244,241,234,0.75)" }}>でも、自分はまだやったことがないことに踏み込んでいきたい。自分の可能性を自分で狭める選び方はしたくありません。今回のWebサイト立ち上げも、その一つです。</p>
+              </div>
             </div>
           </div>
         </section>
@@ -55,20 +59,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="tension" className="tension-section section-cream">
-          <div className="page-wrap tension-grid">
-            <div className="tension-index"><span>01</span><i /></div>
-            <div>
-              <p className="eyebrow dark-eyebrow">率直なスタート</p>
-              <h2>「未経験だから、<br />やらない。」</h2>
-              <p className="tension-answer">そう言ってしまえば、簡単です。</p>
-              <p className="tension-copy">
-                でも、自分はこれからも、まだやったことがないことに踏み込んでいきたい。自分の可能性を、自分で狭める選び方はしたくありません。
-                今回のWebサイト立ち上げも、その一つです。
-              </p>
-            </div>
-          </div>
-        </section>
+        {/* 旧テンションセクション（素直なスタート）はHeroへ統合したため削除 */}
 
         <section className="spark-section">
           <div className="page-wrap spark-layout">
