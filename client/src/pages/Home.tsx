@@ -33,9 +33,9 @@ export default function Home() {
                 <span className="hero-line-2"><em>挑戦しない理由にならない。</em></span>
               </h1>
             </div>
-            <div className="hero-bottom" style={{ display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: "32px", alignItems: "start" }}>
+            <div className="hero-bottom" style={{ display: "grid", gridTemplateColumns: "1.25fr 1fr", gap: "26px", alignItems: "start" }}>
               <p className="hero-lede" style={{ margin: 0 }}>
-                Webサイト制作の実績はありません。それでも、この機会を任せてほしい。
+                Webサイト制作の実績はありません。<br className="hero-lede-break" />それでも、この機会を任せてほしい。
               </p>
               <div className="hero-passion-block" style={{ borderLeft: "2px solid var(--vermillion)", paddingLeft: "18px", color: "rgba(244,241,234,0.9)", fontSize: "13px", lineHeight: "1.9" }}>
                 <p style={{ margin: "0 0 6px", fontWeight: "700", color: "var(--paper)" }}>「未経験だから、やらない。」——そう言ってしまえば、簡単です。</p>
