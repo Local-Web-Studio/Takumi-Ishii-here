@@ -77,7 +77,10 @@ export default function Home() {
           <div className="page-wrap spark-layout">
             <div className="spark-statement">
               <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 挑戦する理由</p>
-              <h2>何歳になっても、<br />今の自分を超えようとしていたい。</h2>
+              <h2 className="spark-title">
+                <span>何歳になっても、</span>
+                <span>今の自分を<br className="mobile-only-break" />超えていきたい。</span>
+              </h2>
             </div>
             <div className="spark-copy">
               <ul className="spark-principles">
@@ -97,7 +100,7 @@ export default function Home() {
             <p className="eyebrow dark-eyebrow">信頼の根拠へ</p>
             <div className="threshold-question">
               <p>でも、熱意だけでは任せられない。</p>
-              <h2>では、なぜ未経験でも<br /><em>「やり切れる」</em>と言えるのか。</h2>
+              <h2>では、なぜ未経験でも<br /><em>「やり切れる」と言えるのか。</em></h2>
             </div>
             <p className="threshold-copy">
               ただ、「やりたい」だけで仕事を任せてほしいとは思っていません。<br />
