@@ -35,7 +35,7 @@ export default function ChapterTwo() {
         <section className="deep-hero section-ink">
           <div className="page-wrap deep-hero-content">
             <img className="deep-symbol" src={symbolImage} alt="" />
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> THE PERSON BEHIND THE PROPOSAL</p>
+            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 提案の背景と人物像</p>
             <div className="deep-title-block">
               <span>TAKUMI<br />ISHII</span>
               <h1>経験のない領域でも、<br /><em>目的から逆算し、</em><br />最後まで形にする。</h1>
@@ -46,7 +46,7 @@ export default function ChapterTwo() {
 
         <section className="spine-section section-cream">
           <div className="page-wrap">
-            <p className="eyebrow dark-eyebrow">ONE LIFE. ONE LINE.</p>
+            <p className="eyebrow dark-eyebrow">仕事に向き合う軸</p>
             <div className="spine-intro">
               <h2>実績も、失敗も、<br />挑戦も。<br /><em>全部、仕事を前へ進める力になる。</em></h2>
               <p>未知の領域でも、目的を定め、必要な知見を集め、関係者と合意し、最後まで形にする。その一連の前進を、Webサイト立ち上げでも再現したい。熱意ではなく、進め方と結果で信頼に応えます。</p>
@@ -62,7 +62,7 @@ export default function ChapterTwo() {
         <section className="proof-section">
           <div className="page-wrap">
             <div className="section-heading offset-heading">
-              <p className="eyebrow dark-eyebrow">PROOF, NOT JUST WORDS</p>
+              <p className="eyebrow dark-eyebrow">言葉ではなく、実績で示す</p>
               <h2>口だけでは、<br /><em>前に進まない。</em></h2>
               <p>三菱自動車にて、倉庫システムマネジメントおよびオペレーション管理に従事しています。</p>
             </div>
@@ -88,7 +88,7 @@ export default function ChapterTwo() {
         <section className="truth-section section-ink">
           <div className="page-wrap truth-layout">
             <div>
-              <p className="eyebrow light-eyebrow">THE PART I WILL NOT HIDE</p>
+              <p className="eyebrow light-eyebrow">隠さずに伝える失敗と改善</p>
               <h2>完璧ではなかった。<br />だから、<br /><em>終わらせなかった。</em></h2>
             </div>
             <div className="truth-copy">
@@ -101,18 +101,18 @@ export default function ChapterTwo() {
 
         <section className="method-section section-cream">
           <div className="page-wrap method-top">
-            <div className="method-heading"><p className="eyebrow dark-eyebrow">IF THE WEB PROJECT STARTS TOMORROW</p><h2>知らない領域でも、<br /><em>進め方</em>はぶらさない。</h2><p>最初から一人ですべてを判断しようとはしません。目的と会社の基準を理解し、必要な知見を集め、検証のゲートを置きながら前に進めます。</p></div>
+            <div className="method-heading"><p className="eyebrow dark-eyebrow">明日からプロジェクトが始まるとしたら</p><h2>知らない領域でも、<br /><em>進め方</em>はぶらさない。</h2><p>最初から一人ですべてを判断しようとはしません。目的と会社の基準を理解し、必要な知見を集め、検証のゲートを置きながら前に進めます。</p></div>
             <figure className="workflow-art"><img src={workflowImage} alt="プロジェクトの検証ゲートを示す抽象図" /></figure>
           </div>
-          <div className="gate-list page-wrap">{gates.map(([number, title, body]) => <article className="gate" key={number}><div className="gate-marker"><span>{number}</span><i /></div><div><h3>{title}</h3><p>{body}</p></div><MoveRight className="gate-arrow" size={22} /></article>)}</div>
+          <div className="gate-list page-wrap">{gates.map(([number, title, body]) => <article className="gate" key={number}><div className="gate-marker"><span>{number}</span><i /></div><div><h3>{title}</h3><p>{body}</p></div><div className="gate-arrow" style={{ opacity: 0.3, fontSize: "11px", fontFamily: "monospace" }}>STEP {number}</div></article>)}</div>
         </section>
 
         <section className="reveal-section">
           <div className="page-wrap reveal-wrap">
-            <p className="eyebrow dark-eyebrow">THE RETURN ON INVESTMENT</p>
+            <p className="eyebrow dark-eyebrow">投資対効果の約束</p>
             <div className="reveal-statement">
               <span className="reveal-quote">“</span>
-              <h2>未経験の挑戦は、<br /><em>あなたにとっての</em><br />確かな投資になる。</h2>
+              <h2>未経験の私に任せることは、<br /><em>あなた（Bさん）にとって</em><br />確かな事業投資になる。</h2>
               <p>「経験がない人に任せるリスク」を、私は圧倒的な当事者意識と、数字・事実に基づく泥臭い実行力でリターンに変えます。指示待ちの受注者ではなく、事業の成果を共につくるパートナーとして動く。</p>
               <p className="reveal-close">この人に任せてよかったと言わせるだけの成果を、ここで必ず証明する。</p>
               <a href="#deep-ask" className="reveal-cta">この挑戦の価値を確かめる <MoveRight size={18} /></a>
@@ -128,7 +128,7 @@ export default function ChapterTwo() {
         <section id="deep-ask" className="deep-ask">
           <div className="ask-overlay" />
           <div className="page-wrap deep-ask-content">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> THE INVITATION TO MEET</p>
+            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 直接お話しする機会へ</p>
             <p className="decision-note">DECISION NOTE / THE NEXT GATE IS A CONVERSATION</p>
             <h2>任せる価値があるか、<br /><em>直接、確かめてください。</em></h2>
             <p>この案件をどう理解し、何を先に決め、誰と連携し、どの順番で形にするのか。<br className="desktop-break" />これまでの実績と具体策を、直接お話しさせてください。</p>

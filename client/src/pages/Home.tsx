@@ -16,7 +16,7 @@ export default function Home() {
         <a href="#top" className="brand-mark" aria-label="石井匠の自己営業、先頭へ">
           <span>TAKUMI ISHII</span>
         </a>
-        <a href="#threshold" className="nav-contact" style={{ font: "500 11px/1 'IBM Plex Mono', monospace", letterSpacing: "0.1em", color: "var(--paper)", borderBottom: "1px solid var(--vermillion)", paddingBottom: "2px" }}>CONTACT</a>
+        <Link href="/chapter-02#deep-ask" className="nav-contact" style={{ font: "500 11px/1 'IBM Plex Mono', monospace", letterSpacing: "0.1em", color: "var(--paper)", borderBottom: "1px solid var(--vermillion)", paddingBottom: "2px" }}>CONTACT</Link>
       </header>
 
       <main id="main">
@@ -44,11 +44,25 @@ export default function Home() {
           <div className="hero-credit">TAKUMI ISHII / PM CANDIDATE</div>
         </section>
 
+        <section id="profile" className="tension-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
+          <div className="page-wrap tension-grid">
+            <div className="tension-index"><span>00</span><i /></div>
+            <div>
+              <p className="eyebrow dark-eyebrow">プロフィール / 誰がこの提案をしているのか</p>
+              <h2>はじめまして、<br /><em>石井 匠</em>です。</h2>
+              <p className="tension-answer" style={{ marginTop: "12px" }}>三菱自動車にて、倉庫システムマネジメントおよびオペレーション管理を担当しています。</p>
+              <p className="tension-copy" style={{ marginTop: "16px" }}>
+                日々の業務では、現場のオペレーションとITシステムをつなぎ、工程のボトルネック解消やシステムの改善・導入を進めてきました。「未経験の領域であっても、目的から逆算し、必要な知見を集めて最後まで形にする」という軸を持って仕事に取り組んでいます。今回のWebサイト立ち上げの機会にあたり、自分の経歴と仕事の進め方をこのページにまとめました。
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section id="tension" className="tension-section section-cream">
           <div className="page-wrap tension-grid">
             <div className="tension-index"><span>01</span><i /></div>
             <div>
-              <p className="eyebrow dark-eyebrow">THE HONEST START</p>
+              <p className="eyebrow dark-eyebrow">率直なスタート</p>
               <h2>「未経験だから、<br />やらない。」</h2>
               <p className="tension-answer">そう言ってしまえば、簡単です。</p>
               <p className="tension-copy">
@@ -63,7 +77,7 @@ export default function Home() {
           <div className="page-wrap spark-layout">
             <div className="spark-statement">
               <img className="section-symbol" src={symbolImage} alt="" />
-              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> THE REASON TO STEP FORWARD</p>
+              <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 前へ踏み出す理由</p>
               <h2>知らない領域でも、<br />目的から逆算し、<br /><em>前へ進める。</em></h2>
             </div>
             <div className="spark-copy">
@@ -80,7 +94,7 @@ export default function Home() {
 
         <section className="threshold-section section-cream">
           <div className="page-wrap threshold-wrap">
-            <p className="eyebrow dark-eyebrow">THE THRESHOLD</p>
+            <p className="eyebrow dark-eyebrow">次のステップへ</p>
             <div className="threshold-question">
               <p>ここから先は、<br />職務経歴書ではありません。</p>
               <h2>石井匠という人間を、<br /><em>もう少し知るための話です。</em></h2>
@@ -90,7 +104,7 @@ export default function Home() {
               それぞれは別の話に見えるかもしれません。でも、自分の中ではすべて一つにつながっています。
             </p>
             <Link href="/chapter-02" className="deep-link">
-              <span className="deep-link-caption">NEXT: REAL PROOF & METHOD</span>
+              <span className="deep-link-caption">実務の証明と仕事の進め方</span>
               <strong>実績と、仕事の進め方を見る</strong>
               <MoveRight size={28} />
             </Link>
