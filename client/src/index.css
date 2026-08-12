@@ -443,3 +443,32 @@ em { font-style: normal; color: var(--vermillion); }
   .final-message { margin-top:49px; }
   .final-message strong { font-size:18px; }
 }
+
+/* Typography audit preview: device-specific baseline supplied for this LP. */
+@media (min-width:1025px) {
+  .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(48px,5vw,64px); line-height:1.6; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(32px,3vw,40px); line-height:1.6; }
+  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
+  .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:13px; line-height:1.5; }
+}
+
+@media (min-width:761px) and (max-width:1024px) {
+  .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(36px,5vw,48px); line-height:1.6; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(24px,3.3vw,32px); line-height:1.65; }
+  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
+  .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:13px; line-height:1.5; }
+  .flagship-case { grid-template-columns:1fr 1fr; }
+  .flagship-case .case-number { grid-column:1 / -1; }
+  .evidence-grid, .principle-grid, .reveal-wrap, .spine-path { grid-template-columns:1fr 1fr; }
+  .evidence-grid .systems-art, .spine-path article:last-child { grid-column:1 / -1; }
+  .proof-support { grid-template-columns:1fr; }
+  .principle-grid > :first-child, .reveal-wrap > :first-child { grid-column:1 / -1; }
+}
+
+@media (max-width:760px) {
+  .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(28px,8.5vw,36px); line-height:1.5; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(20px,6vw,24px); line-height:1.6; }
+  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.65; }
+  .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:12px; line-height:1.5; }
+  .profile-timeline li strong, .deep-link strong, .gate h3, .spine-path h3, .reveal-cta { font-size:16px; line-height:1.5; }
+}
