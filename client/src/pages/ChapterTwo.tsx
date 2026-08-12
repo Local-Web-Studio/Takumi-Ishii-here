@@ -46,10 +46,10 @@ export default function ChapterTwo() {
 
         <section className="spine-section section-cream">
           <div className="page-wrap">
-            <p className="eyebrow dark-eyebrow">仕事に向き合う軸</p>
+            <p className="eyebrow dark-eyebrow">困難に向き合う姿勢とマインド</p>
             <div className="spine-intro">
               <h2>実績も、失敗も、<br />挑戦も。<br /><em>全部、仕事を前へ進める力になる。</em></h2>
-              <p>未知の領域でも、目的を定め、必要な知見を集め、関係者と合意し、最後まで形にする。その一連の前進を、Webサイト立ち上げでも再現したい。熱意ではなく、進め方と結果で信頼に応えます。</p>
+              <p>困難や未知の壁に直面したとき、どのように立ち向かい、どうやって前へ進むのか。その原動力となる仕事観を示します。</p>
             </div>
             <div className="spine-path">
               <article><span>01</span><h3>目的を定める</h3><p>誰に何を届け、どの行動につなげるかを最初に明確にする。</p></article>
@@ -62,25 +62,18 @@ export default function ChapterTwo() {
         <section className="proof-section">
           <div className="page-wrap">
             <div className="section-heading offset-heading">
-              <p className="eyebrow dark-eyebrow">言葉ではなく、実績で示す</p>
+              <p className="eyebrow dark-eyebrow">過去の困難をどう乗り越えたか（実例）</p>
               <h2>口だけでは、<br /><em>前に進まない。</em></h2>
-              <p>三菱自動車にて、倉庫システムマネジメントおよびオペレーション管理に従事しています。</p>
+              <p>三菱自動車での実務において、現場の課題をどのようにデータ化し、仕組みとして解決してきたか。具体的な成果を示す実例です。</p>
             </div>
             <div className="flagship-case">
               <div className="case-number"><span>01</span><i /></div>
               <div className="case-main">
                 <p className="mono-label">FLAGSHIP CASE / ACCESS DASHBOARD</p>
                 <h3>工数を「感覚」から<br />「判断できる情報」へ。</h3>
-                <p>下請け会社に任せきりだった特定業務の進捗と工数を、Accessで自ら可視化。必要なデータと指標を定義し、ダッシュボードを企画・構築・運用しました。作業量に応じた人員配置を判断できる状態をつくり、過剰な人員配置の見直しへつなげました。</p>
+                <p>下請け会社に任せきりだった特定業務の進捗と工数を、Accessで自ら可視化。必要なデータと指標を定義し、ダッシュボードを企画・構築・運用。作業量に応じた人員配置の判断を可能にし、人員適正化へつなげました。</p>
               </div>
-              <div className="metric-block"><span>AVERAGE IMPACT</span><strong>1.4<small>人工 / 月</small></strong><p>効果計測中の平均削減量</p></div>
-            </div>
-            <div className="proof-support">
-              <div className="proof-columns">
-                <article><p className="mono-label">CONNECT</p><h3>紙と手作業の間に、<br />簡易連携をつくる。</h3><p>倉庫基幹システムと倉庫管理システムの間で発生していた印刷・読取を介する運用に対し、VBAとAPIを用いた簡易連携を構築しました。</p></article>
-                <article><p className="mono-label">REDESIGN</p><h3>依頼の流れそのものを、<br />止まらない形へ。</h3><p>商品ラベル再配布の依頼で、FAX・メールから個別指示へ流れていた業務を、ネットフォームと自動応答メールを使った流れへ再設計しました。</p></article>
-              </div>
-              <figure className="proof-art"><img src={systemsImage} alt="業務とシステムをつなぐ概念図" /><figcaption>OPERATIONS × SYSTEMS</figcaption></figure>
+              <div className="metric-block"><span>AVERAGE IMPACT</span><strong>1.4<small>人工 / 月</small></strong><p>平均削減量</p></div>
             </div>
           </div>
         </section>
@@ -88,20 +81,19 @@ export default function ChapterTwo() {
         <section className="truth-section section-ink">
           <div className="page-wrap truth-layout">
             <div>
-              <p className="eyebrow light-eyebrow">隠さずに伝える失敗と改善</p>
+              <p className="eyebrow light-eyebrow">直面した課題と向き合い方</p>
               <h2>完璧ではなかった。<br />だから、<br /><em>終わらせなかった。</em></h2>
             </div>
             <div className="truth-copy">
-              <p>新倉庫への特定書類移管では、倉庫システムの設計・テストから、現場オペレーションのデモ、IT部門への提案、リリースまでを担当しました。業務開始日は予定どおり迎えられた一方、リリース後にはインターフェース、データ量、業務手順に関する課題も発生しました。</p>
-              <p>段階的な梱包工程で発生したキャンセル処理の不具合では、紐付けデータを持たないコンフィグ設計に原因があると切り分け、必要なデータを洗い出しました。大小を含め、ランニングで改善すべき項目は10〜20程度ありました。</p>
-              <div className="release-statement"><CircleDot size={20} /><span>問題が起きたら、止まらない。<br />原因を分解し、次の改善へ進める。</span></div>
+              <p>新倉庫への特定書類移管において、システムリリース後にインターフェースやデータ量に関する課題が発生しました。キャンセル処理の不具合などに対しても、データ構造の不備を自ら切り分け、必要な改善を積み上げました。</p>
+              <div className="release-statement"><CircleDot size={20} /><span>問題が起きたら止まらない。<br />原因を分解し、次の改善へ進める。</span></div>
             </div>
           </div>
         </section>
 
         <section className="method-section section-cream">
           <div className="page-wrap method-top">
-            <div className="method-heading"><p className="eyebrow dark-eyebrow">明日からプロジェクトが始まるとしたら</p><h2>知らない領域でも、<br /><em>進め方</em>はぶらさない。</h2><p>最初から一人ですべてを判断しようとはしません。目的と会社の基準を理解し、必要な知見を集め、検証のゲートを置きながら前に進めます。</p></div>
+            <div className="method-heading"><p className="eyebrow dark-eyebrow">課題をどう解決するかの手順</p><h2>知らない領域でも、<br /><em>進め方</em>はぶらさない。</h2><p>未知のプロジェクトに直面したとき、どのようなプロセスで不確実性を潰し、成果へ到達するかの具体的な手順を示します。</p></div>
             <figure className="workflow-art"><img src={workflowImage} alt="プロジェクトの検証ゲートを示す抽象図" /></figure>
           </div>
           <div className="gate-list page-wrap">{gates.map(([number, title, body]) => <article className="gate" key={number}><div className="gate-marker"><span>{number}</span><i /></div><div><h3>{title}</h3><p>{body}</p></div><div className="gate-arrow" style={{ opacity: 0.3, fontSize: "11px", fontFamily: "monospace" }}>STEP {number}</div></article>)}</div>
