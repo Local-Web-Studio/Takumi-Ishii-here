@@ -61,6 +61,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-shell { overflow: hidden; }
 .page-wrap { width: min(100% - 40px, 1240px); margin: 0 auto; }
 .surface-page, .chapter-two { position:relative; }
+.surface-page { --header-axis-left:max(20px, calc((100vw - 1240px) / 2)); }
 .journey-rail { pointer-events:none; position:absolute; z-index:9; top:0; bottom:67px; left:max(14px, calc((100vw - 1280px)/2 - 25px)); width:1px; background:rgba(222,61,39,.25); }
 .journey-rail i { position:absolute; top:0; left:-2px; width:5px; height:5px; border-radius:50%; background:var(--vermillion); }
 .journey-rail b { position:absolute; left:8px; color:rgba(222,61,39,.7); font:500 7px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; writing-mode:vertical-rl; }
@@ -302,7 +303,7 @@ em { font-style: normal; color: var(--vermillion); }
 .spark-action-banner { background:rgba(255,255,255,.05); border-left:3px solid var(--vermillion); padding:18px 22px; border-radius:0 6px 6px 0; }
 .spark-action-banner strong { color:#fff; font-size:clamp(16px,1.55vw,20px); letter-spacing:-.02em; font-weight:800; }
 .threshold-section { padding:clamp(110px,17vw,230px) 0; text-align:left; }
-.threshold-wrap { max-width:920px; }
+.threshold-wrap { max-width:920px; margin-right:0; margin-left:var(--header-axis-left); }
 .threshold-wrap > .eyebrow { justify-content:flex-start; }
 .threshold-question { margin:31px 0 0; }
 .threshold-question > p { margin:0; color:#75808f; font-size:13px; line-height:1.9; }
@@ -475,4 +476,9 @@ em { font-style: normal; color: var(--vermillion); }
   .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.65; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:12px; line-height:1.5; }
   .profile-timeline li strong, .deep-link strong, .gate h3, .spine-path h3, .reveal-cta { font-size:16px; line-height:1.5; }
+}
+
+@media (max-width:760px) {
+  .surface-page { --header-axis-left:16px; }
+  .threshold-wrap { margin-left:var(--header-axis-left); }
 }
