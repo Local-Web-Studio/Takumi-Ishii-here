@@ -2,25 +2,46 @@
  * THE LINE OF INTENT / CHAPTER 02
  * Intent: turn curiosity into a coherent proof of ability, values, and a natural invitation to meet.
  */
-import { useState } from "react";
-import { ArrowUpRight, CircleDot, Mail, MessageCircle } from "lucide-react";
+import { type FormEvent, useState } from "react";
+import { ArrowUpRight, CircleDot, Send } from "lucide-react";
 import { Link } from "wouter";
+import { submitExternalFeedback } from "@/lib/feedbackSubmit";
 
 const systemsImage = "/manus-storage/ishii-systems-to-operations_2b5bf073.png";
-// 連絡先URLが決まったら、この2行だけを差し替える。
-const lineCtaUrl = "https://line.me/ti/p/JuqZS2mvxA";
-const mailAddress = "takumi.ishii.0224@gmail.com";
-const mailCtaUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(mailAddress)}`;
-export default function ChapterTwo() {
-  const [emailCopied, setEmailCopied] = useState(false);
 
-  const handleCopyEmail = async () => {
+export default function ChapterTwo() {
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [feedbackContact, setFeedbackContact] = useState("");
+  const [formError, setFormError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<"idle" | "success" | "error">("idle");
+
+  const handleFeedbackSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (isSubmitting) return;
+    if (!feedbackMessage.trim()) {
+      setFormError("フィードバックを入力してください。");
+      return;
+    }
+
+    setFormError("");
+    setSubmitState("idle");
+    setIsSubmitting(true);
+
     try {
-      await navigator.clipboard.writeText(mailAddress);
-      setEmailCopied(true);
-      window.setTimeout(() => setEmailCopied(false), 2400);
+      await submitExternalFeedback({
+        message: feedbackMessage,
+        contact: feedbackContact,
+        sourceUrl: window.location.href,
+      });
+
+      setFeedbackMessage("");
+      setFeedbackContact("");
+      setSubmitState("success");
     } catch {
-      window.prompt("メールアドレスをコピーしてください", mailAddress);
+      setSubmitState("error");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -135,30 +156,45 @@ export default function ChapterTwo() {
             <p id="contact-label" className="eyebrow light-eyebrow anchor-label"><span className="signal-dot" /> はじめの一歩</p>
             <h2>ぜひ、ここまでの<br /><em>フィードバックをください。</em></h2>
             <p>このLPを読んで感じたこと、気になること、任せてもいいと思えたこと。<br className="desktop-break" />どんな一言でも、ぜひ聞かせてください。</p>
-            <div className="final-contact-actions" aria-label="連絡方法">
-              {lineCtaUrl ? (
-                <a className="final-contact-cta final-contact-cta--line" href={lineCtaUrl}>
-                  <MessageCircle size={20} aria-hidden="true" /> LINEで連絡する
-                </a>
-              ) : (
-                <span className="final-contact-cta final-contact-cta--line is-pending" aria-disabled="true">
-                  <MessageCircle size={20} aria-hidden="true" /> LINEで連絡する
-                </span>
-              )}
-              {mailCtaUrl ? (
-                <a className="final-contact-cta final-contact-cta--mail" href={mailCtaUrl} target="_blank" rel="noreferrer">
-                  <Mail size={20} aria-hidden="true" /> Gmailで連絡する
-                </a>
-              ) : (
-                <span className="final-contact-cta final-contact-cta--mail is-pending" aria-disabled="true">
-                  <Mail size={20} aria-hidden="true" /> メールで連絡する
-                </span>
-              )}
-            </div>
-            <button type="button" className="email-copy-action" onClick={handleCopyEmail}>
-              {emailCopied ? "メールアドレスをコピーしました" : "メールアドレスをコピー"}
-              <span>{mailAddress}</span>
-            </button>
+            <form className="feedback-form" onSubmit={handleFeedbackSubmit}>
+              <div className="feedback-field">
+                <label htmlFor="feedback-message">フィードバック <span>必須</span></label>
+                <textarea
+                  id="feedback-message"
+                  value={feedbackMessage}
+                  onChange={(event) => {
+                    setFormError("");
+                    if (submitState !== "idle") setSubmitState("idle");
+                    setFeedbackMessage(event.target.value);
+                  }}
+                  placeholder="感じたことや気になることを、自由にお聞かせください。"
+                  maxLength={2000}
+                />
+              </div>
+              <div className="feedback-field">
+                <label htmlFor="feedback-contact">返信先 <span>任意</span></label>
+                <input
+                  id="feedback-contact"
+                  type="text"
+                  value={feedbackContact}
+                  onChange={(event) => {
+                    setFormError("");
+                    if (submitState !== "idle") setSubmitState("idle");
+                    setFeedbackContact(event.target.value);
+                  }}
+                  placeholder="メールアドレス・LINE IDなど"
+                  maxLength={320}
+                />
+              </div>
+              <p className="feedback-privacy">送信内容はフォーム送信サービスを経由して石井 匠へ届きます。返信先は、返信が必要な場合にのみ使用します。</p>
+              <button className="feedback-submit" type="submit" disabled={isSubmitting}>
+                <Send size={18} aria-hidden="true" />
+                {isSubmitting ? "送信しています…" : "フィードバックを送る"}
+              </button>
+              {formError && <p className="feedback-status feedback-status--error" role="alert">{formError}</p>}
+              {submitState === "success" && <p className="feedback-status feedback-status--success" role="status">送信しました。フィードバックをありがとうございます。</p>}
+              {submitState === "error" && <p className="feedback-status feedback-status--error" role="alert">送信できませんでした。時間をおいて、もう一度お試しください。</p>}
+            </form>
             <Link href="/#home-title" className="back-to-top inline-flex items-center gap-2">
               最初から読み返す <ArrowUpRight size={18} />
             </Link>
