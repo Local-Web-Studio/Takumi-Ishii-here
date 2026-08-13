@@ -50,10 +50,11 @@ function HashScrollRestorer() {
 
   return null;
 }
-
 function Router() {
-  const isGitHubPages = window.location.pathname.startsWith('/Takumi-Ishii-here');
-  const base = isGitHubPages ? '/Takumi-Ishii-here' : '';
+  const githubPagesBase = ["/takumi-ishii", "/Takumi-Ishii-here"].find((candidate) =>
+    window.location.pathname.startsWith(candidate),
+  );
+  const base = githubPagesBase ?? "";
   return (
     <WouterRouter base={base}>
       <HashScrollRestorer />

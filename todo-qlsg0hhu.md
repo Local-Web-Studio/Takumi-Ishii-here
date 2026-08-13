@@ -510,6 +510,7 @@ Gate09は人生観の再説明ではなく、「この機会を自分の成長�
 
 - [ ] GitHubリポジトリ名をTakumi-Ishii-hereからtakumi-ishiiへ変更する。
 - [ ] ViteのGitHub Pagesベースパスとフォーム送信元URLを新しいURLへ更新する。
+- [ ] WouterのGitHub Pagesベースパス判定を新URLへ対応させ、アプリ内404を解消する。
 - [ ] 新しいGitHub Pages URLでLP・アンカー・フィードバックフォームを確認する。
 
 ## モバイルヘッダー・プロフィール再構成のGitHub反映
