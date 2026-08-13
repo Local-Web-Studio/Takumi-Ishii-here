@@ -2,7 +2,7 @@
  * THE LINE OF INTENT / CHAPTER 02
  * Intent: turn curiosity into a coherent proof of ability, values, and a natural invitation to meet.
  */
-import { ArrowLeft, ArrowUpRight, CircleDot, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, CircleDot, Mail, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 
 const systemsImage = "/manus-storage/ishii-systems-to-operations_2b5bf073.png";
@@ -14,19 +14,20 @@ export default function ChapterTwo() {
     <div className="site-shell chapter-two">
       <a className="skip-link" href="#deep-main">本文へ移動</a>
       <header className="topbar deep-topbar" aria-label="サイトヘッダー" style={{ position: "fixed", top: 0, background: "rgba(11,16,26,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(244,241,234,0.12)" }}>
-        <Link href="/" className="brand-mark" aria-label="第1章へ戻る">
+        <Link href="/#home-title" className="brand-mark" aria-label="Homeの主見出しへ移動">
           <span>TAKUMI ISHII</span>
         </Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <Link href="/#home-title" className="header-cta">TOP</Link>
+          <Link href="/#profile-label" className="header-cta">PROFILE</Link>
           <a href="#contact-label" className="header-cta">CONTACT</a>
-          <Link className="return-link" href="/" style={{ color: "rgba(244,241,234,0.7)" }}><ArrowLeft size={15} /> 最初に戻る</Link>
         </div>
       </header>
 
       <main id="deep-main">
         <section className="deep-hero section-ink chapter-proof-hero">
           <div className="page-wrap deep-hero-content">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 自信の根拠</p>
+            <p id="proof-hero-label" className="eyebrow light-eyebrow anchor-label"><span className="signal-dot" /> 自信の根拠</p>
             <div className="deep-title-block proof-hero-title-block">
               <h1 className="proof-hero-title">なぜ、未経験でも<br /><em>「やり切れる」と<span className="proof-hero-mobile-break"><br /></span>言えるのか。</em></h1>
             </div>
@@ -140,7 +141,7 @@ export default function ChapterTwo() {
                 </span>
               )}
             </div>
-            <Link href="/" className="back-to-top inline-flex items-center gap-2">
+            <Link href="/#home-title" className="back-to-top inline-flex items-center gap-2">
               最初から読み返す <ArrowUpRight size={18} />
             </Link>
           </div>

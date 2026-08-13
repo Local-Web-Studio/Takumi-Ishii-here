@@ -69,7 +69,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .deep-rail b:nth-of-type(1){top:9%}.deep-rail b:nth-of-type(2){top:23%}.deep-rail b:nth-of-type(3){top:39%}.deep-rail b:nth-of-type(4){top:54%}.deep-rail b:nth-of-type(5){top:68%}.deep-rail b:nth-of-type(6){top:82%}.deep-rail b:nth-of-type(7){bottom:4%}
 .topbar {
   position: absolute; z-index: 20; top: 0; left: 0; right: 0; width: min(100% - 40px, 1240px); margin: 0 auto;
-  height: 92px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(244,241,234,0.24);
+  height: 92px; padding-inline:8px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(244,241,234,0.24);
 }
 .brand-mark { display: inline-flex; align-items: center; gap: 10px; font: 500 10px/1 "IBM Plex Mono", monospace; letter-spacing: 0.1em; }
 .brand-mark img { width: 28px; height: 28px; object-fit: contain; }

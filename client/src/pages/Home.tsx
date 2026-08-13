@@ -12,11 +12,12 @@ export default function Home() {
     <div className="site-shell surface-page">
       <a className="skip-link" href="#main">本文へ移動</a>
       <header className="topbar" aria-label="サイトヘッダー" style={{ position: "fixed", top: 0, background: "rgba(11,16,26,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(244,241,234,0.12)" }}>
-        <a href="#top" className="brand-mark" aria-label="石井匠の自己営業、先頭へ">
+        <a href="#home-title" className="brand-mark" aria-label="主見出しへ移動">
           <span>TAKUMI ISHII</span>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <a href="#profile-label" className="header-cta">プロフィール</a>
+          <a href="#home-title" className="header-cta">TOP</a>
+          <a href="#profile-label" className="header-cta">PROFILE</a>
           <Link href="/chapter-02#contact-label" className="header-cta">CONTACT</Link>
         </div>
       </header>
@@ -27,7 +28,7 @@ export default function Home() {
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-content page-wrap">
             <div className="hero-title-wrap">
-              <h1 className="hero-title-text">
+              <h1 id="home-title" className="hero-title-text anchor-label">
                 <span className="hero-line-1">経験がないことは、</span><br />
                 <span className="hero-line-2"><em>挑戦しない理由にならない。</em></span>
               </h1>
@@ -105,7 +106,7 @@ export default function Home() {
               ただ、「やりたい」だけで仕事を任せてほしいとは思っていません。<br />
               その答えは、これまでの仕事の中にあります。
             </p>
-            <Link href="/chapter-02" className="deep-link">
+            <Link href="/chapter-02#proof-hero-label" className="deep-link">
               <strong>やり切れると言える根拠を見る</strong>
               <MoveRight size={20} />
             </Link>
