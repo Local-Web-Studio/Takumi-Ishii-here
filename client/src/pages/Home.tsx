@@ -53,7 +53,7 @@ export default function Home() {
               <div className="profile-stage">
                 <figure className="profile-photo-frame" aria-label="プロフィール写真">
                   <div className="profile-photo-container">
-                    <img src={`${import.meta.env.BASE_URL}assets/profile-placeholder.jpg`} alt="石井 匠 プロフィール写真" className="profile-photo-img" />
+                    <img src="/manus-storage/takumi-ishii-profile_7f91b594.webp" alt="石井 匠 プロフィール写真" className="profile-photo-img" />
                   </div>
                   <figcaption>TAKUMI ISHII</figcaption>
                 </figure>
