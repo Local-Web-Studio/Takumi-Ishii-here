@@ -405,41 +405,29 @@ em { font-style: normal; color: var(--vermillion); }
 .recovery-timeline p { margin:5px 0 0; color:#485260; font-size:12px; line-height:1.8; }
 .recovery-close { margin:42px 0 0 auto; display:flex; width:min(100%, 680px); gap:12px; align-items:flex-start; color:var(--ink); font-family:"Zen Kaku Gothic New",sans-serif; font-size:20px; line-height:1.55; font-weight:700; letter-spacing:-.035em; }
 .recovery-close svg { flex:0 0 auto; margin-top:5px; color:var(--vermillion); }
-.proof-recap { padding:clamp(76px,10vw,138px) 0; color:var(--ink); background:var(--paper-bright); }
-.proof-recap-layout { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(310px,.95fr); gap:clamp(36px,8vw,120px); align-items:start; margin-top:22px; }
-.proof-recap h2 { margin:0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(31px,4.1vw,56px); line-height:1.38; letter-spacing:-.06em; font-weight:900; }
+.proof-recap { padding:clamp(96px,13vw,184px) 0; color:var(--ink); background:#e7e1d7; }
+.proof-recap-decision { display:grid; grid-template-columns:minmax(0,1.12fr) minmax(310px,.88fr); gap:clamp(38px,9vw,136px); align-items:start; }
+.proof-recap-intro { max-width:690px; }
+.proof-recap-intro .eyebrow { margin-bottom:24px; }
+.proof-recap h2 { margin:0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(32px,4.25vw,58px); line-height:1.38; letter-spacing:-.06em; font-weight:900; }
+.proof-recap-intro > p:last-child { max-width:590px; margin:31px 0 0; color:#414b59; font-size:14px; line-height:2.1; }
+.proof-recap-intro > p strong { color:var(--ink); font-weight:700; }
 .proof-recap-evidence { border-top:1px solid var(--ink); }
-.proof-recap-evidence > p { margin:0; padding:18px 0; border-bottom:1px solid rgba(16,23,36,.34); color:#3f4a59; font-size:14px; line-height:1.9; }
+.proof-recap-evidence > p { margin:0; padding:21px 0; border-bottom:1px solid rgba(16,23,36,.34); color:#3f4a59; font-size:14px; line-height:1.9; }
 .proof-recap-evidence > p > span { display:block; margin-bottom:8px; color:var(--vermillion); font:500 10px/1 "IBM Plex Mono",monospace; letter-spacing:.1em; }
 .proof-recap-evidence strong { color:var(--ink); font-weight:700; }
-.proof-recap-evidence .proof-recap-close { padding-bottom:0; border-bottom:0; color:var(--ink); font-family:"Zen Kaku Gothic New",sans-serif; font-size:16px; line-height:1.7; font-weight:700; letter-spacing:-.025em; }
-.reveal-section { padding:clamp(75px,11vw,160px) 0; color:var(--ink); background:#e7e1d7; }
-.reveal-wrap { max-width:1085px; margin-left:12.5%; display:grid; grid-template-columns:minmax(0,1.35fr) minmax(190px,.65fr); gap:clamp(34px,6vw,92px); align-items:start; }
-.reveal-statement { max-width:670px; position:relative; }
-.reveal-statement .eyebrow { margin-bottom:24px; }
-.reveal-quote { display:block; margin-bottom:-24px; color:var(--vermillion); font:900 125px/.7 Georgia,serif; }
-.reveal-statement h2 { position:relative; margin:0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(30px,4.1vw,57px); line-height:1.38; letter-spacing:-.06em; font-weight:900; }
-.reveal-statement p { margin:29px 0 0; color:#414b59; font-size:14px; line-height:2.1; }
-.reveal-statement .reveal-close { color:var(--vermillion); font-size:17px; font-weight:700; }
-.reveal-cta { margin-top:32px; display:inline-flex; gap:10px; align-items:center; padding:14px 18px; color:var(--paper-bright); background:var(--vermillion); font-size:12px; font-weight:700; letter-spacing:.04em; border-radius:4px; box-shadow:0 12px 24px rgba(222,61,39,.18); transition:transform 160ms var(--ease-out), background-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out); }
-.reveal-cta:hover { background:#c93220; transform:translateY(-2px); box-shadow:0 16px 28px rgba(222,61,39,.28); }
-.reveal-cta:active { transform:translateY(0) scale(.98); }
-.reveal-checks { padding-top:42px; display:flex; flex-direction:column; gap:15px; color:#313a47; font-size:12px; font-weight:600; }
-.reveal-checks div { display:flex; gap:9px; align-items:flex-start; }
-.reveal-checks svg { flex:0 0 auto; color:var(--vermillion); }
-.deep-ask { position:relative; isolation:isolate; padding:clamp(85px,13vw,180px) 0; color:var(--paper); background-color:var(--ink); background-image:linear-gradient(rgba(244,241,234,.045) 1px, transparent 1px),linear-gradient(90deg,rgba(244,241,234,.045) 1px,transparent 1px); background-size:72px 72px; overflow:hidden; }
+.proof-recap-conclusion { margin-top:37px; padding:26px 28px 28px; background:var(--paper-bright); border-top:3px solid var(--ink); }
+.proof-recap-conclusion > strong { display:block; font-family:"Zen Kaku Gothic New",sans-serif; color:var(--ink); font-size:clamp(18px,2vw,25px); line-height:1.55; letter-spacing:-.035em; }
+.proof-recap-conclusion > p { margin:17px 0 0; color:#414b59; font-size:13px; line-height:2; }
+.deep-ask { position:relative; isolation:isolate; padding:clamp(72px,9vw,124px) 0; color:var(--paper); background-color:var(--ink); background-image:linear-gradient(rgba(244,241,234,.045) 1px, transparent 1px),linear-gradient(90deg,rgba(244,241,234,.045) 1px,transparent 1px); background-size:72px 72px; overflow:hidden; }
 .deep-ask::before { display:none; }
 .decision-note { margin:26px 0 0; color:rgba(244,241,234,.5); font:500 9px/1.5 "IBM Plex Mono",monospace; letter-spacing:.11em; }
 
 .deep-ask-content { position:relative; z-index:1; }
-.deep-ask-content h2 { max-width:950px; margin:25px 0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(46px,6.3vw,91px); line-height:1.18; letter-spacing:-.075em; font-weight:900; }
+.deep-ask-content h2 { max-width:950px; margin:20px 0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(42px,5.5vw,72px); line-height:1.22; letter-spacing:-.075em; font-weight:900; }
 .deep-ask-content > p:not(.eyebrow) { margin:0; color:rgba(244,241,234,.86); font-size:15px; line-height:2.15; }
-.final-message { max-width:620px; margin-top:64px; padding:24px 0 0; display:flex; gap:16px; border-top:1px solid rgba(244,241,234,.42); }
-.final-message img { width:48px; height:48px; object-fit:contain; }
-.final-message span, .final-message strong, .final-message small { display:block; }
-.final-message span { color:rgba(244,241,234,.62); font-size:11px; }
-.final-message strong { margin-top:7px; font-size:21px; letter-spacing:.04em; }
-.final-message small { margin-top:10px; color:rgba(244,241,234,.7); font-size:11px; }
+.final-message { max-width:620px; margin-top:34px; padding:19px 0 0; border-top:1px solid rgba(244,241,234,.42); }
+.final-message strong { display:block; color:var(--paper); font-size:20px; line-height:1.65; letter-spacing:.025em; }
 
 @media (max-width:760px) {
   .tension-section, .spark-section, .threshold-section, .spine-section { padding-top:76px; padding-bottom:76px; }
@@ -490,31 +478,27 @@ em { font-style: normal; color: var(--vermillion); }
   .proof-art { min-height:185px; max-height:185px; }
   .truth-copy { padding-top:0; }
   .truth-copy > p { font-size:13px; }
-  .reveal-wrap { margin-left:0; grid-template-columns:1fr; gap:24px; }
-  .reveal-statement h2 { font-size:clamp(30px,8.5vw,38px); }
-  .reveal-statement p { font-size:13px; }
-  .reveal-checks { padding-top:3px; }
-  .deep-ask { padding-top:76px; padding-bottom:76px; }
+  .deep-ask { padding-top:68px; padding-bottom:68px; }
   .deep-ask::before { top:31%; width:112%; height:25%; left:-18%; }
   .decision-note { font-size:8px; letter-spacing:.07em; }
   .deep-ask-content h2 { font-size:clamp(43px,12.5vw,55px); }
   .deep-ask-content > p:not(.eyebrow) { font-size:13px; }
-  .final-message { margin-top:49px; }
+  .final-message { margin-top:29px; }
   .final-message strong { font-size:18px; }
 }
 
 /* Typography audit preview: device-specific baseline supplied for this LP. */
 @media (min-width:1025px) {
   .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(48px,5vw,64px); line-height:1.6; }
-  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(32px,3vw,40px); line-height:1.6; }
-  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .proof-recap h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(32px,3vw,40px); line-height:1.6; }
+  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .proof-recap-intro > p:last-child, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:13px; line-height:1.5; }
 }
 
 @media (min-width:761px) and (max-width:1024px) {
   .hero h1, .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(36px,5vw,48px); line-height:1.6; }
-  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(24px,3.3vw,32px); line-height:1.65; }
-  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .proof-recap h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(24px,3.3vw,32px); line-height:1.65; }
+  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .proof-recap-intro > p:last-child, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.7; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:13px; line-height:1.5; }
   .flagship-case { grid-template-columns:1fr 1fr; }
   .flagship-case .case-number { grid-column:1 / -1; }
@@ -528,8 +512,8 @@ em { font-style: normal; color: var(--vermillion); }
 @media (max-width:760px) {
   .hero h1 { font-size:clamp(23px,calc(8.5vw - 5px),31px); line-height:1.5; }
   .deep-hero h1, .ask-content h2, .deep-ask-content h2 { font-size:clamp(28px,8.5vw,36px); line-height:1.5; }
-  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .reveal-statement h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(20px,6vw,24px); line-height:1.6; }
-  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .reveal-statement p, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.65; }
+  .intro-copy h2, .section-heading h2, .method-heading h2, .principle-main h2, .tension-grid h2, .profile-content h2, .spine-intro h2, .release-heading h2, .truth-layout h2, .proof-recap h2, .spark-statement h2, .threshold-question h2 { font-size:clamp(20px,6vw,24px); line-height:1.6; }
+  .hero-lede, .hero-passion-block, .intro-copy > p:not(.eyebrow), .section-heading > p:last-child, .case-main > p:last-child, .evidence-card > p:last-child, .release-copy > p, .method-heading > p:last-child, .gate p, .principle-main > p, .ask-content > p:not(.eyebrow), .tension-copy, .threshold-copy, .deep-hero-copy, .spine-intro > p, .spine-path p, .proof-columns article > p:last-child, .truth-copy > p, .proof-recap-intro > p:last-child, .deep-ask-content > p:not(.eyebrow) { font-size:16px; line-height:1.65; }
   .eyebrow, .chapter-line, .mono-label, .case-number, .gate-marker, .profile-timeline-label, .profile-timeline li span, .decision-note, .footer, .metric-block > span, .metric-block p { font-size:12px; line-height:1.5; }
   .profile-timeline li strong, .deep-link strong, .gate h3, .spine-path h3, .reveal-cta { font-size:16px; line-height:1.5; }
 }
@@ -579,9 +563,12 @@ em { font-style: normal; color: var(--vermillion); }
   .recovery-timeline h3 { font-size:17px; }
   .recovery-timeline p { margin-top:4px; font-size:15px; line-height:1.6; }
   .recovery-close { width:auto; margin-top:24px; font-size:18px; }
-  .proof-recap { padding-top:72px; padding-bottom:72px; }
-  .proof-recap-layout { grid-template-columns:1fr; gap:32px; margin-top:18px; }
+  .proof-recap { padding-top:76px; padding-bottom:76px; }
+  .proof-recap-decision { grid-template-columns:1fr; gap:34px; }
   .proof-recap h2 { font-size:clamp(20px,6vw,24px); line-height:1.6; }
+  .proof-recap-intro > p:last-child { margin-top:20px; font-size:16px; line-height:1.65; }
   .proof-recap-evidence > p { padding:15px 0; font-size:16px; line-height:1.65; }
-  .proof-recap-evidence .proof-recap-close { font-size:16px; line-height:1.65; }
+  .proof-recap-conclusion { margin-top:26px; padding:22px 20px 23px; }
+  .proof-recap-conclusion > strong { font-size:18px; line-height:1.55; }
+  .proof-recap-conclusion > p { font-size:15px; line-height:1.7; }
 }

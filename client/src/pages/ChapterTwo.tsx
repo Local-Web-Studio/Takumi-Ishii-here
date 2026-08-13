@@ -2,10 +2,9 @@
  * THE LINE OF INTENT / CHAPTER 02
  * Intent: turn curiosity into a coherent proof of ability, values, and a natural invitation to meet.
  */
-import { ArrowLeft, ArrowUpRight, Check, CircleDot, MoveRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CircleDot } from "lucide-react";
 import { Link } from "wouter";
 
-const symbolImage = "/manus-storage/ishii-ti-symbol_b6b82ae3.png";
 const systemsImage = "/manus-storage/ishii-systems-to-operations_2b5bf073.png";
 export default function ChapterTwo() {
   return (
@@ -95,33 +94,19 @@ export default function ChapterTwo() {
         </section>
 
         <section className="proof-recap section-paper">
-          <div className="page-wrap">
-            <p className="eyebrow dark-eyebrow"><span className="signal-dot" /> 二つの実例に共通すること</p>
-            <div className="proof-recap-layout">
-              <h2>先が見えない状況を、<br /><em>次に判断できる状態へ変える。</em></h2>
-              <div className="proof-recap-evidence">
-                <p><span>PROOF 01</span>見えなかった作業量・工数を、<strong>人員配置を判断できる材料</strong>に変えた。</p>
-                <p><span>PROOF 02</span>散らばった問題を、<strong>次に対応する順番</strong>に変えた。</p>
-                <p className="proof-recap-close">案件は違っても、次に進むために何を見ればよいかをつくる。この考え方は、今回にも持ち込めます。</p>
+          <div className="page-wrap proof-recap-decision">
+            <div className="proof-recap-intro">
+              <p className="eyebrow dark-eyebrow"><span className="signal-dot" /> この挑戦への約束</p>
+              <h2>この挑戦を、<br /><em>任せてよかったと<br />思える仕事にする。</em></h2>
+              <p>Web制作の経験がないことは、変えられない事実です。それでも、自分に任せてください。立場にかかわらず、<strong>「石井 匠でよかった」</strong>と思ってもらえるように、必要なことに踏み込み、最後まで形にします。</p>
+            </div>
+            <div className="proof-recap-evidence">
+              <p><span>PROOF 01</span>見えなかった作業量・工数を、<strong>人員配置を判断できる材料</strong>に変えた。</p>
+              <p><span>PROOF 02</span>散らばった問題を、<strong>次に対応する順番</strong>に変えた。</p>
+              <div className="proof-recap-conclusion">
+                <strong>先が見えない状況を、次に判断できる状態へ変える。</strong>
+                <p>案件が変わっても、この進め方は変わりません。まずは小さく任せて、進め方と結果を確かめてください。</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="reveal-section">
-          <div className="page-wrap reveal-wrap">
-            <div className="reveal-statement">
-              <p className="eyebrow dark-eyebrow"><span className="signal-dot" /> まず任せてみる理由</p>
-              <span className="reveal-quote">“</span>
-              <h2>未経験であることは、<br /><em>隠しません。</em><br />それでも、まず任せてみてください。</h2>
-              <p>Web制作の経験がないことは事実です。だから、経験があるふりはしません。ただ、目的と課題を整理し、必要なことを一つずつ前へ進め、使える状態まで持っていく仕事は、これまでもしてきました。</p>
-              <p className="reveal-close">まずは小さく任せて、進め方と結果を見てください。</p>
-              <a href="#deep-ask" className="reveal-cta">具体的な進め方を聞く <MoveRight size={18} /></a>
-            </div>
-            <div className="reveal-checks">
-              <div><Check size={17} />課題を整理し、次に決めるべきことを明らかにする</div>
-              <div><Check size={17} />必要な情報・関係者を集め、前へ進める</div>
-              <div><Check size={17} />使える状態になるまで、最後まで進める</div>
             </div>
           </div>
         </section>
@@ -129,16 +114,11 @@ export default function ChapterTwo() {
         <section id="deep-ask" className="deep-ask">
           <div className="ask-overlay" />
           <div className="page-wrap deep-ask-content">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 具体的な進め方の確認</p>
-            <h2>まずは、進め方を<br /><em>直接、確かめてください。</em></h2>
-            <p>この案件をどう理解し、何を先に確認し、誰と連携し、どの順番で形にするのか。<br className="desktop-break" />実績と具体的な進め方を、直接お話しさせてください。</p>
+            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 次の一歩</p>
+            <h2>まずは、<br /><em>直接お話しさせてください。</em></h2>
+            <p>この案件をどう理解し、何を先に確認し、どんな順番で形にするのか。<br className="desktop-break" />具体的な進め方を、直接お話しします。</p>
             <div className="final-message">
-              <img src={symbolImage} alt="" />
-              <div>
-                <span>まずは、直接お話しする機会をください。</span>
-                <strong>Bさんと一度、具体的な進め方をお話しさせてください。</strong>
-                <small>まず任せてみるかどうかは、その対話のあとでご判断ください。</small>
-              </div>
+              <strong>Bさんと、具体的な進め方をお話しする機会をください。</strong>
             </div>
             <Link href="/" className="back-to-top inline-flex items-center gap-2">
               最初から読み返す <ArrowUpRight size={18} />
