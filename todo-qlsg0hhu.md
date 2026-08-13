@@ -439,3 +439,9 @@ Gate09は人生観の再説明ではなく、「この機会を自分の成長�
 
 - [ ] CSS・プロフィール画像参照・作業メモをGitHubへ同期する。
 - [ ] GitHub Actionsのデプロイ成功とGitHub Pagesのモバイル表示を確認する。
+
+## GitHub Pagesのプロフィール写真表示修正
+
+- [ ] GitHub Pagesで表示できる公開用の最適化済みプロフィール画像を配置する。
+- [ ] LPの写真参照をGitHub Pages対応パスへ切り替える。
+- [ ] GitHub Pagesで写真表示とモバイルプロフィールを再確認する。
