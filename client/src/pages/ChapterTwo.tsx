@@ -2,14 +2,28 @@
  * THE LINE OF INTENT / CHAPTER 02
  * Intent: turn curiosity into a coherent proof of ability, values, and a natural invitation to meet.
  */
+import { useState } from "react";
 import { ArrowUpRight, CircleDot, Mail, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 
 const systemsImage = "/manus-storage/ishii-systems-to-operations_2b5bf073.png";
 // 連絡先URLが決まったら、この2行だけを差し替える。
 const lineCtaUrl = "https://line.me/ti/p/JuqZS2mvxA";
-const mailCtaUrl = "mailto:takumi.ishii.0224@gmail.com";
+const mailAddress = "takumi.ishii.0224@gmail.com";
+const mailCtaUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(mailAddress)}`;
 export default function ChapterTwo() {
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(mailAddress);
+      setEmailCopied(true);
+      window.setTimeout(() => setEmailCopied(false), 2400);
+    } catch {
+      window.prompt("メールアドレスをコピーしてください", mailAddress);
+    }
+  };
+
   return (
     <div className="site-shell chapter-two">
       <a className="skip-link" href="#deep-main">本文へ移動</a>
@@ -132,8 +146,8 @@ export default function ChapterTwo() {
                 </span>
               )}
               {mailCtaUrl ? (
-                <a className="final-contact-cta final-contact-cta--mail" href={mailCtaUrl}>
-                  <Mail size={20} aria-hidden="true" /> メールで連絡する
+                <a className="final-contact-cta final-contact-cta--mail" href={mailCtaUrl} target="_blank" rel="noreferrer">
+                  <Mail size={20} aria-hidden="true" /> Gmailで連絡する
                 </a>
               ) : (
                 <span className="final-contact-cta final-contact-cta--mail is-pending" aria-disabled="true">
@@ -141,6 +155,10 @@ export default function ChapterTwo() {
                 </span>
               )}
             </div>
+            <button type="button" className="email-copy-action" onClick={handleCopyEmail}>
+              {emailCopied ? "メールアドレスをコピーしました" : "メールアドレスをコピー"}
+              <span>{mailAddress}</span>
+            </button>
             <Link href="/#home-title" className="back-to-top inline-flex items-center gap-2">
               最初から読み返す <ArrowUpRight size={18} />
             </Link>

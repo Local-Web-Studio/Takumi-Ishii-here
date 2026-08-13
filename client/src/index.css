@@ -435,6 +435,9 @@ em { font-style: normal; color: var(--vermillion); }
 .final-contact-cta--mail:not(.is-pending):hover { color:var(--ink); background:var(--paper-bright); border-color:var(--paper-bright); }
 .final-contact-cta:not(.is-pending):active { transform:scale(.98); }
 .final-contact-cta.is-pending { cursor:not-allowed; opacity:.76; }
+.email-copy-action { margin-top:14px; padding:0; display:inline-flex; align-items:baseline; gap:9px; border:0; background:transparent; color:rgba(244,241,234,.72); font:500 11px/1.5 "Noto Sans JP",sans-serif; text-align:left; cursor:pointer; transition:color 160ms var(--ease-out); }
+.email-copy-action:hover { color:var(--paper); }
+.email-copy-action span { color:rgba(244,241,234,.52); font:400 10px/1.5 "IBM Plex Mono",monospace; letter-spacing:.02em; }
 
 @media (max-width:760px) {
   .tension-section, .spark-section, .threshold-section, .spine-section { padding-top:76px; padding-bottom:76px; }
@@ -493,6 +496,8 @@ em { font-style: normal; color: var(--vermillion); }
   .deep-ask-content > p:not(.eyebrow) { font-size:13px; }
   .final-contact-actions { width:100%; margin-top:28px; gap:8px; }
   .final-contact-cta { min-height:56px; padding:13px 10px; gap:7px; font-size:14px; }
+  .email-copy-action { margin-top:12px; align-items:flex-start; flex-direction:column; gap:2px; font-size:12px; }
+  .email-copy-action span { font-size:10px; }
 }
 
 /* Typography audit preview: device-specific baseline supplied for this LP. */
