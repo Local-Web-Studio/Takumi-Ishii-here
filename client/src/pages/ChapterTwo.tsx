@@ -8,7 +8,7 @@ import { Link } from "wouter";
 const systemsImage = "/manus-storage/ishii-systems-to-operations_2b5bf073.png";
 // 連絡先URLが決まったら、この2行だけを差し替える。
 const lineCtaUrl = "https://line.me/ti/p/JuqZS2mvxA";
-const mailCtaUrl = "";
+const mailCtaUrl = "mailto:takumi.ishii.0224@gmail.com";
 export default function ChapterTwo() {
   return (
     <div className="site-shell chapter-two">

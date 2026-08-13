@@ -60,10 +60,10 @@ export default function Home() {
                 <div className="profile-timeline-wrap">
                   <p className="profile-timeline-label">これまでの歩み</p>
                   <ol className="profile-timeline" aria-label="石井匠のこれまでの歩み">
-                    <li><span>01</span><strong>自動車メーカー入社</strong></li>
-                    <li><span>02</span><strong>物流部門に配属</strong></li>
-                    <li><span>03</span><strong>倉庫オペレーション・システム領域へ</strong></li>
-                    <li><span>04</span><strong>PM / 改善業務を担当</strong></li>
+                    <li><strong>自動車メーカー入社</strong></li>
+                    <li><strong>物流部門に配属</strong></li>
+                    <li><strong>倉庫オペレーション・システム領域へ</strong></li>
+                    <li><strong>PM / 改善業務を担当</strong></li>
                   </ol>
                 </div>
               </div>
