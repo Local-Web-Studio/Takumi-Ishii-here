@@ -16,8 +16,8 @@ export default function Home() {
           <span>TAKUMI ISHII</span>
         </a>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <a href="#profile" className="header-cta">プロフィール</a>
-          <Link href="/chapter-02#deep-ask" className="header-cta">CONTACT</Link>
+          <a href="#profile-label" className="header-cta">プロフィール</a>
+          <Link href="/chapter-02#contact-label" className="header-cta">CONTACT</Link>
         </div>
       </header>
 
@@ -44,10 +44,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="profile" className="tension-section profile-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
+        <section className="tension-section profile-section section-cream" style={{ borderBottom: "1px solid rgba(11,16,26,0.1)" }}>
           <div className="page-wrap profile-layout">
             <div className="profile-content">
-              <p className="eyebrow dark-eyebrow"><span className="signal-dot" /> 人物と実務の基盤</p>
+              <p id="profile-label" className="eyebrow dark-eyebrow anchor-label"><span className="signal-dot" /> プロフィール</p>
               <h2>はじめまして、<em>石井 匠</em>です。</h2>
               <div className="profile-stage">
                 <figure className="profile-photo-frame" aria-label="プロフィール写真">
@@ -114,7 +114,6 @@ export default function Home() {
       </main>
 
       <footer className="footer">
-        <span>TAKUMI ISHII / SELF SALES LP</span>
         <span>THE NEXT STEP BEGINS WITH YOUR CLICK</span>
       </footer>
     </div>

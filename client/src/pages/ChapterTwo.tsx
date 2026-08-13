@@ -18,7 +18,7 @@ export default function ChapterTwo() {
           <span>TAKUMI ISHII</span>
         </Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <a href="#deep-ask" style={{ font: "500 11px/1 'IBM Plex Mono', monospace", letterSpacing: "0.1em", color: "var(--paper)", borderBottom: "1px solid var(--vermillion)", paddingBottom: "2px" }}>CONTACT</a>
+          <a href="#contact-label" className="header-cta">CONTACT</a>
           <Link className="return-link" href="/" style={{ color: "rgba(244,241,234,0.7)" }}><ArrowLeft size={15} /> 最初に戻る</Link>
         </div>
       </header>
@@ -114,10 +114,10 @@ export default function ChapterTwo() {
           </div>
         </section>
 
-        <section id="deep-ask" className="deep-ask">
+        <section className="deep-ask">
           <div className="ask-overlay" />
           <div className="page-wrap deep-ask-content">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> はじめの一歩</p>
+            <p id="contact-label" className="eyebrow light-eyebrow anchor-label"><span className="signal-dot" /> はじめの一歩</p>
             <h2>ぜひ、ここまでの<br /><em>フィードバックをください。</em></h2>
             <p>このLPを読んで感じたこと、気になること、任せてもいいと思えたこと。<br className="desktop-break" />どんな一言でも、ぜひ聞かせてください。</p>
             <div className="final-contact-actions" aria-label="連絡方法">
@@ -146,7 +146,7 @@ export default function ChapterTwo() {
           </div>
         </section>
       </main>
-      <footer className="footer"><span>TAKUMI ISHII / SELF SALES LP</span><span>THE NEXT CONVERSATION STARTS HERE</span></footer>
+      <footer className="footer"><span>THE NEXT CONVERSATION STARTS HERE</span></footer>
     </div>
   );
 }
