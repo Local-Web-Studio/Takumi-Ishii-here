@@ -2,10 +2,13 @@
  * THE LINE OF INTENT / CHAPTER 02
  * Intent: turn curiosity into a coherent proof of ability, values, and a natural invitation to meet.
  */
-import { ArrowLeft, ArrowUpRight, CircleDot } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CircleDot, Mail, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 
 const systemsImage = "/manus-storage/ishii-systems-to-operations_2b5bf073.png";
+// 連絡先URLが決まったら、この2行だけを差し替える。
+const lineCtaUrl = "https://line.me/ti/p/JuqZS2mvxA";
+const mailCtaUrl = "";
 export default function ChapterTwo() {
   return (
     <div className="site-shell chapter-two">
@@ -114,11 +117,28 @@ export default function ChapterTwo() {
         <section id="deep-ask" className="deep-ask">
           <div className="ask-overlay" />
           <div className="page-wrap deep-ask-content">
-            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> 次の一歩</p>
-            <h2>まずは、<br /><em>直接お話しさせてください。</em></h2>
-            <p>この案件をどう理解し、何を先に確認し、どんな順番で形にするのか。<br className="desktop-break" />具体的な進め方を、直接お話しします。</p>
-            <div className="final-message">
-              <strong>Bさんと、具体的な進め方をお話しする機会をください。</strong>
+            <p className="eyebrow light-eyebrow"><span className="signal-dot" /> はじめの一歩</p>
+            <h2>ぜひ、ここまでの<br /><em>フィードバックをください。</em></h2>
+            <p>このLPを読んで感じたこと、気になること、任せてもいいと思えたこと。<br className="desktop-break" />どんな一言でも、ぜひ聞かせてください。</p>
+            <div className="final-contact-actions" aria-label="連絡方法">
+              {lineCtaUrl ? (
+                <a className="final-contact-cta final-contact-cta--line" href={lineCtaUrl}>
+                  <MessageCircle size={20} aria-hidden="true" /> LINEで連絡する
+                </a>
+              ) : (
+                <span className="final-contact-cta final-contact-cta--line is-pending" aria-disabled="true">
+                  <MessageCircle size={20} aria-hidden="true" /> LINEで連絡する
+                </span>
+              )}
+              {mailCtaUrl ? (
+                <a className="final-contact-cta final-contact-cta--mail" href={mailCtaUrl}>
+                  <Mail size={20} aria-hidden="true" /> メールで連絡する
+                </a>
+              ) : (
+                <span className="final-contact-cta final-contact-cta--mail is-pending" aria-disabled="true">
+                  <Mail size={20} aria-hidden="true" /> メールで連絡する
+                </span>
+              )}
             </div>
             <Link href="/" className="back-to-top inline-flex items-center gap-2">
               最初から読み返す <ArrowUpRight size={18} />

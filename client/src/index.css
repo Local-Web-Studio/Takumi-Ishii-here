@@ -426,8 +426,15 @@ em { font-style: normal; color: var(--vermillion); }
 .deep-ask-content { position:relative; z-index:1; }
 .deep-ask-content h2 { max-width:950px; margin:20px 0; font-family:"Zen Kaku Gothic New",sans-serif; font-size:clamp(42px,5.5vw,72px); line-height:1.22; letter-spacing:-.075em; font-weight:900; }
 .deep-ask-content > p:not(.eyebrow) { margin:0; color:rgba(244,241,234,.86); font-size:15px; line-height:2.15; }
-.final-message { max-width:620px; margin-top:34px; padding:19px 0 0; border-top:1px solid rgba(244,241,234,.42); }
-.final-message strong { display:block; color:var(--paper); font-size:20px; line-height:1.65; letter-spacing:.025em; }
+.final-contact-actions { width:min(100%, 470px); margin-top:34px; display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:10px; }
+.final-contact-cta { min-height:58px; padding:14px 15px; display:inline-flex; align-items:center; justify-content:center; gap:9px; font-family:"Zen Kaku Gothic New",sans-serif; font-size:14px; line-height:1.35; font-weight:700; letter-spacing:-.02em; transition:transform 160ms var(--ease-out), background-color 160ms var(--ease-out), color 160ms var(--ease-out), border-color 160ms var(--ease-out); }
+.final-contact-cta--line { color:var(--ink); background:var(--paper-bright); }
+.final-contact-cta--mail { color:var(--paper); border:1px solid rgba(244,241,234,.65); }
+.final-contact-cta:not(.is-pending):hover { transform:translateY(-2px); }
+.final-contact-cta--line:not(.is-pending):hover { color:var(--paper); background:var(--vermillion); }
+.final-contact-cta--mail:not(.is-pending):hover { color:var(--ink); background:var(--paper-bright); border-color:var(--paper-bright); }
+.final-contact-cta:not(.is-pending):active { transform:scale(.98); }
+.final-contact-cta.is-pending { cursor:not-allowed; opacity:.76; }
 
 @media (max-width:760px) {
   .tension-section, .spark-section, .threshold-section, .spine-section { padding-top:76px; padding-bottom:76px; }
@@ -483,8 +490,8 @@ em { font-style: normal; color: var(--vermillion); }
   .decision-note { font-size:8px; letter-spacing:.07em; }
   .deep-ask-content h2 { font-size:clamp(43px,12.5vw,55px); }
   .deep-ask-content > p:not(.eyebrow) { font-size:13px; }
-  .final-message { margin-top:29px; }
-  .final-message strong { font-size:18px; }
+  .final-contact-actions { width:100%; margin-top:28px; gap:8px; }
+  .final-contact-cta { min-height:56px; padding:13px 10px; gap:7px; font-size:14px; }
 }
 
 /* Typography audit preview: device-specific baseline supplied for this LP. */
